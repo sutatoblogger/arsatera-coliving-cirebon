@@ -71,6 +71,7 @@
     </script>
     
     <style>
+        /* 1. MENGHAPUS GAMBAR BOCOR DI BACKGROUND BODY */
         body { 
             background-color: #030712; 
             background-image: radial-gradient(circle at 15% 0%, rgba(16, 185, 129, 0.15) 0%, transparent 40%), radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
@@ -79,83 +80,40 @@
         .glass-card { background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); border-radius: 1.5rem; transition: all 0.4s; }
         .glass-nav { background: rgba(3, 7, 18, 0.65); border-bottom: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(24px); }
         
-        /* Setup IG Overlay */
+        /* 2. SETUP IG OVERLAY */
         #ig-wrapper { position: relative; width: 100%; max-width: 350px; aspect-ratio: 9/16; margin: 0 auto; border-radius: 2rem; overflow: hidden; }
         .ig-placeholder { position: absolute; inset: 0; background: #0a0f1c; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10; cursor: pointer; transition: opacity 0.5s ease; border: 1px solid rgba(255,255,255,0.1); }
         .ig-placeholder:hover .ig-play-btn { transform: scale(1.1); background: #10b981; color: #030712; }
         .ig-play-btn { transition: all 0.3s ease; }
 
-        /* =======================================================
-           PERBAIKAN: CSS MENU DROPDOWN & MENU MOBILE
-           ======================================================= */
-        .dropdown-group:hover .dropdown-menu { 
-            opacity: 1; 
-            visibility: visible; 
-            transform: translateY(0); 
-            pointer-events: auto; 
-        }
-        .dropdown-menu { 
-            opacity: 0; 
-            visibility: hidden; 
-            transform: translateY(10px); 
-            transition: all 0.3s ease; 
-            pointer-events: none; 
-        }
+        /* 3. CSS MENU DROPDOWN & MENU MOBILE */
+        .dropdown-group:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
+        .dropdown-menu { opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; pointer-events: none; }
         #mobile-menu { transition: transform 0.3s ease-in-out; }
-        .menu-open { transform: translateX(0) !important; }
+        .translate-x-full { transform: translateX(100%); }
+        .translate-x-0 { transform: translateX(0); }
 
-        /* =======================================================
-           JARVIS TITAN PROTOCOL - ISOLATION CSS & DUAL CTA
-           ======================================================= */
+        /* 4. JARVIS TITAN PROTOCOL - DUAL CTA WIDGET */
         @media (max-width: 768px) { body { padding-bottom: 120px !important; } }
-
         .jarvis-agency-link { color: #334155; text-decoration: none; transition: all 0.3s ease; }
         .jarvis-agency-link:hover { color: #10b981; font-weight: bold; }
-
-        @keyframes jarvis-pulse {
-            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-        }
+        @keyframes jarvis-pulse { 0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); } 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); } }
         
-        .jarvis-trap-container {
-            position: fixed; bottom: 25px; right: 25px; z-index: 9999;
-            display: flex; gap: 15px; align-items: center;
-        }
-        
-        .jarvis-cta-wa {
-            width: 60px; height: 60px; background: #25D366; border-radius: 50%;
-            display: flex; justify-content: center; align-items: center;
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
-            transition: transform 0.3s ease; text-decoration: none;
-        }
+        .jarvis-trap-container { position: fixed; bottom: 25px; right: 25px; z-index: 9999; display: flex; gap: 15px; align-items: center; }
+        .jarvis-cta-wa { width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); transition: transform 0.3s ease; text-decoration: none; }
         .jarvis-cta-wa:hover { transform: scale(1.1); }
         .jarvis-cta-wa svg { fill: #fff; width: 35px; height: 35px; }
 
-        .jarvis-cta-ai {
-            width: 60px; height: 60px; background: #ffffff; border: 2px solid #10b981;
-            border-radius: 50%; cursor: pointer; animation: jarvis-pulse 2s infinite;
-            display: flex; justify-content: center; align-items: center; box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-            transition: transform 0.3s ease; overflow: hidden;
-        }
+        .jarvis-cta-ai { width: 60px; height: 60px; background: #ffffff; border: 2px solid #10b981; border-radius: 50%; cursor: pointer; animation: jarvis-pulse 2s infinite; display: flex; justify-content: center; align-items: center; box-shadow: 0 5px 15px rgba(0,0,0,0.5); transition: transform 0.3s ease; overflow: hidden; }
         .jarvis-cta-ai:hover { transform: scale(1.1); }
         .jarvis-cta-ai img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.1); }
 
-        .jarvis-voice-btn {
-            flex-shrink: 0; background: transparent; border: 1px solid #10b981; border-radius: 50%;
-            width: 45px; height: 45px; display: flex; justify-content: center; align-items: center;
-            cursor: pointer; transition: all 0.3s ease; margin-top: 2px;
-        }
+        .jarvis-voice-btn { flex-shrink: 0; background: transparent; border: 1px solid #10b981; border-radius: 50%; width: 45px; height: 45px; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: all 0.3s ease; margin-top: 2px; }
         .jarvis-voice-btn svg { fill: #10b981; width: 22px; height: 22px; transition: 0.3s; }
         .jarvis-voice-btn.jarvis-playing { background: #10b981; animation: jarvis-pulse 1.5s infinite; }
         .jarvis-voice-btn.jarvis-playing svg { fill: #030712; }
 
-        .jarvis-chat-box {
-            display: none; position: fixed; bottom: 100px; right: 25px; width: 320px;
-            background: rgba(3, 7, 18, 0.96); backdrop-filter: blur(16px);
-            border: 1px solid #10b981; border-radius: 16px; z-index: 9998;
-            flex-direction: column; box-shadow: 0 12px 35px rgba(0,0,0,0.6); overflow: hidden;
-        }
+        .jarvis-chat-box { display: none; position: fixed; bottom: 100px; right: 25px; width: 320px; background: rgba(3, 7, 18, 0.96); backdrop-filter: blur(16px); border: 1px solid #10b981; border-radius: 16px; z-index: 9998; flex-direction: column; box-shadow: 0 12px 35px rgba(0,0,0,0.6); overflow: hidden; }
         .jarvis-chat-header { background: #10b981; color: #030712; padding: 12px 15px; font-weight: 800; display: flex; justify-content: space-between; align-items: center; }
         .jarvis-chat-history { height: 280px; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; scroll-behavior: smooth; color: #cbd5e1; }
         .jarvis-chat-input-area { padding: 10px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; gap: 8px; background: rgba(3, 7, 18, 0.8); }
@@ -169,7 +127,7 @@
 </head>
 <body class="text-slate-400 font-sans antialiased min-h-screen flex flex-col selection:bg-auraEmerald selection:text-black">
 
-    <!-- ================= 3. AURA HEADER & MOBILE MENU (RESTORED MULTI-PAGE) ================= -->
+    <!-- ================= 3. AURA HEADER & MOBILE MENU ================= -->
     <nav class="fixed w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
@@ -187,7 +145,6 @@
                     <div class="relative dropdown-group py-6">
                         <a href="#fasilitas" class="hover:text-white flex items-center gap-1 transition-colors cursor-pointer">TIPE KAMAR <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></a>
                         <div class="dropdown-menu absolute top-[75px] -left-4 w-64 glass-card p-2 z-50 rounded-2xl border-auraEmerald/20">
-                            <!-- Link ini sudah terhubung ke sub-page yang Anda buat -->
                             <a href="tipe-kamar/mezzanine-harian.html" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-auraEmerald transition-colors">Mezzanine (Harian)</a>
                             <a href="#" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-auraEmerald transition-colors">Mezzanine (Bulanan)</a>
                             <a href="#" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-auraEmerald transition-colors">Sewa Full Guest House</a>
@@ -207,16 +164,15 @@
                         <span class="relative z-10 flex items-center gap-2">Reservasi WA <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
                     </a>
                     
-                    <!-- Tombol Hamburger Mobile (Skrip JS-nya sudah stand-by di bawah) -->
-                    <button id="menu-btn" class="lg:hidden p-2 text-white hover:text-auraEmerald focus:outline-none bg-white/5 rounded-lg border border-white/10">
+                    <button id="menu-btn" class="lg:hidden p-2 text-white hover:text-auraEmerald focus:outline-none bg-white/5 rounded-lg border border-white/10 z-50 relative">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- MENU MOBILE TERSEMBUNYI -->
-        <div id="mobile-menu" class="fixed inset-0 bg-[#030712]/95 backdrop-blur-xl z-40 transform translate-x-full flex flex-col pt-24 px-6 pb-8 border-l border-white/10 lg:hidden overflow-y-auto">
+        <!-- MENU MOBILE TERSEMBUNYI (FULL) -->
+        <div id="mobile-menu" class="fixed inset-0 bg-[#030712]/98 backdrop-blur-xl z-40 transform translate-x-full flex flex-col pt-24 px-6 pb-8 border-l border-white/10 lg:hidden overflow-y-auto transition-transform duration-300">
             <div class="flex flex-col gap-6 text-lg font-bold text-slate-200 w-full">
                 <a href="/" class="text-auraEmerald pb-2 border-b border-white/10">Beranda</a>
                 
@@ -226,7 +182,7 @@
                         Tipe Kamar
                         <svg id="mobile-dropdown-icon" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <!-- Sub-menu Tipe Kamar -->
+                    <!-- Sub-menu -->
                     <div id="mobile-dropdown-menu" class="hidden flex-col gap-4 pl-4 pt-4 text-base font-semibold text-slate-400">
                         <a href="tipe-kamar/mezzanine-harian.html" class="hover:text-auraEmerald block">Mezzanine (Harian)</a>
                         <a href="#" class="hover:text-auraEmerald block">Mezzanine (Bulanan)</a>
@@ -883,7 +839,7 @@
         </div>
     </div>
 
-    <!-- ================= KUMPULAN SCRIPT MASTER (OMNI-FORM + AI + MENU + VIDEO FACADE) ================= -->
+    <!-- ================= KUMPULAN SCRIPT MASTER ================= -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             
@@ -894,30 +850,33 @@
             if(btn && mobileMenu) {
                 btn.addEventListener('click', () => {
                     mobileMenu.classList.toggle('translate-x-full');
+                    mobileMenu.classList.toggle('translate-x-0');
                 });
                 
-                const mobileLinks = mobileMenu.querySelectorAll('a');
+                const mobileLinks = mobileMenu.querySelectorAll('a:not(#mobile-dropdown-btn)');
                 mobileLinks.forEach(link => {
                     link.addEventListener('click', () => {
+                        mobileMenu.classList.remove('translate-x-0');
                         mobileMenu.classList.add('translate-x-full');
                     });
                 });
             }
-			
-			// 1.5. SCRIPT DROPDOWN MENU MOBILE (ACCORDION)
+
+            // 1.5. SCRIPT DROPDOWN MENU MOBILE (ACCORDION)
             const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
             const mobileDropdownMenu = document.getElementById('mobile-dropdown-menu');
             const mobileDropdownIcon = document.getElementById('mobile-dropdown-icon');
             
             if(mobileDropdownBtn && mobileDropdownMenu) {
-                mobileDropdownBtn.addEventListener('click', () => {
+                mobileDropdownBtn.addEventListener('click', (e) => {
+                    e.preventDefault(); // Mencegah loncat ke atas
                     mobileDropdownMenu.classList.toggle('hidden');
                     mobileDropdownMenu.classList.toggle('flex');
                     mobileDropdownIcon.classList.toggle('rotate-180');
                 });
             }
 
-            // 2. SCRIPT FORM SUBMISSION (WEB3FORMS + GSHEETS + WA) - 100% AMAN
+            // 2. SCRIPT FORM SUBMISSION (WEB3FORMS + GSHEETS + WA)
             const waForm = document.getElementById('waForm');
             if(waForm) {
                 waForm.addEventListener('submit', async function(event) {
@@ -929,16 +888,12 @@
                     
                     submitBtn.innerText = "MENGIRIM DATA..."; submitBtn.disabled = true;
                     try {
-                        // Kirim ke Web3Forms (Email)
                         await fetch('https://api.web3forms.com/submit', { method: 'POST', body: compiledFormData }); 
                         
                         const rawJsonData = Object.fromEntries(compiledFormData.entries());
-                        
-                        // Kirim ke Google Sheets (Database)
                         const sheetUrl = 'https://script.google.com/macros/s/AKfycbxwB6z8BSSP_D86AUPDqDWT-tajBbCdsrgcyhT6LzG_KNDKh4BrLO9mOL_ZKIRPjXoD/exec'; 
                         await fetch(sheetUrl, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(rawJsonData) });
                         
-                        // Redirect ke WhatsApp Arsa Tera
                         const waNumber = "6285111367588"; 
                         const waText = `Halo Arsa Tera, saya ingin reservasi kamar.\n\n*Nama:* ${rawJsonData.name}\n*Nomor WA:* ${rawJsonData.whatsapp}\n*Tipe Kamar:* ${rawJsonData.layanan}\n*Catatan/Tanggal:* ${rawJsonData.message}\n\nMohon info ketersediaan kamarnya ya.`;
                         window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(waText)}`, '_blank');
@@ -974,7 +929,7 @@
                 });
             });
 
-            // 4. SCRIPT AI CHATBOT WIDGET (ARSA TERA)
+            // 4. SCRIPT AI CHATBOT WIDGET
             const aiBtn = document.getElementById('jarvis-ai-button');
             const chatBox = document.getElementById('jarvis-chat-box');
             const closeBtn = document.getElementById('jarvis-close-ai');
@@ -1001,25 +956,12 @@
                     setTimeout(() => {
                         document.getElementById(loadId).remove();
                         let reply = "";
-                        
-                        if (userText.match(/harga|biaya|berapa|pricelist|tarif/)) { 
-                            reply = `Untuk kamar tipe Mezzanine Eksklusif, harganya mulai dari Rp 450.000 per malam, atau Rp 3.450.000 untuk sewa bulanan. Sudah termasuk Smart TV dan koneksi Wi-Fi kencang. Hubungi Admin via WA untuk promo terbaru!`; 
-                        } 
-                        else if (userText.match(/lokasi|dimana|alamat|daerah|tempat|cipto/)) { 
-                            reply = `Arsa Tera sangat strategis di pusat kota! Alamat kami di Jl. Pembangunan V Blok L No.19, Pekiringan, Kec. Kesambi, Cirebon. Sangat dekat dengan Jalan Cipto.`; 
-                        } 
-                        else if (userText.match(/fasilitas|dapat apa|ac|tv|dapur/)) { 
-                            reply = `Fasilitas kami setara apartemen! Anda mendapatkan kamar AC, Smart TV, Kamar Mandi Dalam, Kasur Queen Size, serta akses ke Open Space Kitchen dan Free Flow air minum.`; 
-                        } 
-                        else if (userText.match(/jam malam|bebas|kunci/)) { 
-                            reply = `Tenang saja, Arsa Tera menerapkan sistem akses fleksibel 24 jam khusus untuk penghuni, namun dengan sistem keamanan terpadu agar privasi dan keamanan Anda tetap terjamin.`; 
-                        }
-                        else if (userText.match(/pesan|booking|reservasi|sewa|wa|admin/)) { 
-                            reply = `Untuk cek ketersediaan kamar dan reservasi, silakan langsung klik ikon WhatsApp hijau di pojok layar, atau hubungi nomor WA kami di +62 851-1136-7588.`; 
-                        } 
-                        else { 
-                            reply = `Pertanyaan yang bagus. Untuk info lebih detail, silakan langsung terhubung dengan Admin kami via WhatsApp di +62 851-1136-7588. Mereka siap membantu Anda.`; 
-                        }
+                        if (userText.match(/harga|biaya|berapa|pricelist|tarif/)) { reply = `Untuk kamar tipe Mezzanine Eksklusif, harganya mulai dari Rp 450.000 per malam, atau Rp 3.450.000 untuk sewa bulanan. Hubungi Admin via WA untuk promo terbaru!`; } 
+                        else if (userText.match(/lokasi|dimana|alamat|daerah|tempat|cipto/)) { reply = `Arsa Tera sangat strategis di pusat kota! Alamat kami di Jl. Pembangunan V Blok L No.19, Pekiringan, Kec. Kesambi, Cirebon.`; } 
+                        else if (userText.match(/fasilitas|dapat apa|ac|tv|dapur/)) { reply = `Anda mendapatkan kamar AC, Smart TV, Kamar Mandi Dalam, Kasur Queen Size, serta akses ke Open Space Kitchen dan Free Flow air minum.`; } 
+                        else if (userText.match(/jam malam|bebas|kunci/)) { reply = `Arsa Tera menerapkan sistem akses fleksibel 24 jam khusus untuk penghuni dengan sistem keamanan terpadu.`; }
+                        else if (userText.match(/pesan|booking|reservasi|sewa|wa|admin/)) { reply = `Untuk reservasi, silakan langsung klik ikon WhatsApp hijau di pojok layar, atau hubungi WA kami di +62 851-1136-7588.`; } 
+                        else { reply = `Untuk info lebih detail, silakan langsung terhubung dengan Admin kami via WhatsApp di +62 851-1136-7588.`; }
                         
                         chatHistory.innerHTML += `<div class="jarvis-msg-ai">${reply}</div>`;
                         chatHistory.scrollTop = chatHistory.scrollHeight;
@@ -1035,7 +977,7 @@
             facades.forEach(facade => {
                 facade.addEventListener('click', function() {
                     const videoSrc = this.getAttribute('data-video');
-                    this.innerHTML = `<iframe src="${videoSrc}" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" class="w-full h-full object-cover"></iframe>`;
+                    this.innerHTML = `<iframe src="${videoSrc}" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" class="w-full h-full object-cover rounded-[2rem]"></iframe>`;
                     this.classList.remove('cursor-pointer', 'group');
                 });
             });
