@@ -13,7 +13,7 @@
     <meta name="robots" content="index, follow">
     
     <!-- UBAH BAGIAN INI DENGAN URL VERCEL YANG ANDA PILIH -->
-    <link rel="canonical" href="https://[NAMA-URL-VERCEL-ANDA].vercel.app/">
+    <link rel="canonical" href="https://arsatera-coliving-cirebon.vercel.app/">
 
     <!-- JSON-LD GOD-TIER -->
     <script type="application/ld+json">
@@ -22,10 +22,10 @@
       "@graph": [
         {
           "@type": "LocalBusiness",
-          "@id": "https://[NAMA-URL-VERCEL-ANDA].vercel.app/#organization",
+          "@id": "https://arsatera-coliving-cirebon.vercel.app/#organization",
           "name": "Arsa Tera Guest House & Co-Living",
           "image": "https://dongkrakusaha.com/gambarbebas/1142920260821-015226_kost-eksklusif-cirebon-arsa-tera.jpg",
-          "url": "https://[NAMA-URL-VERCEL-ANDA].vercel.app/",
+          "url": "https://arsatera-coliving-cirebon.vercel.app/",
           "telephone": "+6285111367588",
           "priceRange": "Rp 450.000 - Rp 3.450.000",
           "description": "Layanan penyewaan penginapan harian dan kos eksklusif bulanan dengan konsep kamar mezzanine modern di Cirebon.",
@@ -48,23 +48,11 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- ==========================================
+         SKRIP INI YANG TADI TERHAPUS (WARNA HILANG)
+         ========================================== -->
     <script>
-	// 0. SCRIPT PENGGERAK MENU MOBILE (HAMBURGER)
-        const btn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if(btn && mobileMenu) {
-            btn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('menu-open');
-            });
-        }
-
-        // Fitur Ekstra: Otomatis tutup menu mobile jika pengunjung mengklik salah satu link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('menu-open');
-            });
-        });
         tailwind.config = {
             theme: {
                 extend: {
@@ -90,12 +78,33 @@
         }
         .glass-card { background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); border-radius: 1.5rem; transition: all 0.4s; }
         .glass-nav { background: rgba(3, 7, 18, 0.65); border-bottom: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(24px); }
+        
         /* Setup IG Overlay */
         #ig-wrapper { position: relative; width: 100%; max-width: 350px; aspect-ratio: 9/16; margin: 0 auto; border-radius: 2rem; overflow: hidden; }
         .ig-placeholder { position: absolute; inset: 0; background: #0a0f1c; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10; cursor: pointer; transition: opacity 0.5s ease; border: 1px solid rgba(255,255,255,0.1); }
         .ig-placeholder:hover .ig-play-btn { transform: scale(1.1); background: #10b981; color: #030712; }
         .ig-play-btn { transition: all 0.3s ease; }
-		/* =======================================================
+
+        /* =======================================================
+           PERBAIKAN: CSS MENU DROPDOWN & MENU MOBILE
+           ======================================================= */
+        .dropdown-group:hover .dropdown-menu { 
+            opacity: 1; 
+            visibility: visible; 
+            transform: translateY(0); 
+            pointer-events: auto; 
+        }
+        .dropdown-menu { 
+            opacity: 0; 
+            visibility: hidden; 
+            transform: translateY(10px); 
+            transition: all 0.3s ease; 
+            pointer-events: none; 
+        }
+        #mobile-menu { transition: transform 0.3s ease-in-out; }
+        .menu-open { transform: translateX(0) !important; }
+
+        /* =======================================================
            JARVIS TITAN PROTOCOL - ISOLATION CSS & DUAL CTA
            ======================================================= */
         @media (max-width: 768px) { body { padding-bottom: 120px !important; } }
@@ -114,7 +123,6 @@
             display: flex; gap: 15px; align-items: center;
         }
         
-        /* Tombol WA Melayang */
         .jarvis-cta-wa {
             width: 60px; height: 60px; background: #25D366; border-radius: 50%;
             display: flex; justify-content: center; align-items: center;
@@ -124,7 +132,6 @@
         .jarvis-cta-wa:hover { transform: scale(1.1); }
         .jarvis-cta-wa svg { fill: #fff; width: 35px; height: 35px; }
 
-        /* Tombol AI (Dengan Logo Kustom) */
         .jarvis-cta-ai {
             width: 60px; height: 60px; background: #ffffff; border: 2px solid #10b981;
             border-radius: 50%; cursor: pointer; animation: jarvis-pulse 2s infinite;
@@ -158,25 +165,6 @@
         .jarvis-msg-ai { background: rgba(255,255,255,0.05); padding: 10px 12px; border-radius: 8px 8px 8px 0; align-self: flex-start; max-width: 85%; border-left: 2px solid #10b981; }
         .jarvis-msg-user { background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); color: #10b981; padding: 10px 12px; border-radius: 8px 8px 0 8px; align-self: flex-end; max-width: 85%; font-weight: 600; }
         .jarvis-typing { font-style: italic; opacity: 0.6; }
-		/* =======================================================
-           PERBAIKAN: CSS MENU DROPDOWN & MENU MOBILE
-           ======================================================= */
-        .dropdown-group:hover .dropdown-menu { 
-            opacity: 1; 
-            visibility: visible; 
-            transform: translateY(0); 
-            pointer-events: auto; 
-        }
-        .dropdown-menu { 
-            opacity: 0; 
-            visibility: hidden; 
-            transform: translateY(10px); 
-            transition: all 0.3s ease; 
-            pointer-events: none; 
-        }
-        
-        #mobile-menu { transition: transform 0.3s ease-in-out; }
-        .menu-open { transform: translateX(0) !important; }
     </style>
 </head>
 <body class="text-slate-400 font-sans antialiased min-h-screen flex flex-col selection:bg-auraEmerald selection:text-black">
