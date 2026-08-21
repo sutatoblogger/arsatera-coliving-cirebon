@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Arsa Tera Guest House & Co-Living | Kos Eksklusif Cirebon</title>
-    <link rel="preload" as="image" href="https://dongkrakusaha.com/gambarbebas/1142920260821-015226_kost-eksklusif-cirebon-arsa-tera.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="https://dongkrakusaha.com/gambarbebas/1142920260821-011235_penginapan-mezzanine-cirebon-arsa-tera-01.jpg" fetchpriority="high">
     <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
     <meta name="description" content="Arsa Tera Guest House tawarkan kamar tingkat Instagramable, Smart TV, Open Kitchen & promo khusus di Kesambi Cirebon. Booking sebelum penuh!">
     <meta name="keywords" content="kost eksklusif cirebon, penginapan mezzanine cirebon, guest house unik cirebon, kos bulanan kesambi cirebon">
     <meta name="author" content="Arsa Tera">
     <meta name="robots" content="index, follow">
     
-    <!-- UBAH BAGIAN INI DENGAN URL VERCEL YANG ANDA PILIH -->
     <link rel="canonical" href="https://arsatera-coliving-cirebon.vercel.app/">
 
     <!-- JSON-LD GOD-TIER -->
@@ -49,9 +48,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- ==========================================
-         SKRIP INI YANG TADI TERHAPUS (WARNA HILANG)
-         ========================================== -->
     <script>
         tailwind.config = {
             theme: {
@@ -71,7 +67,7 @@
     </script>
     
     <style>
-        /* 1. MENGHAPUS GAMBAR BOCOR DI BACKGROUND BODY */
+        /* BACKGROUND BODY MUTLAK BERSIH DARI GAMBAR */
         body { 
             background-color: #030712; 
             background-image: radial-gradient(circle at 15% 0%, rgba(16, 185, 129, 0.15) 0%, transparent 40%), radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
@@ -80,20 +76,14 @@
         .glass-card { background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); border-radius: 1.5rem; transition: all 0.4s; }
         .glass-nav { background: rgba(3, 7, 18, 0.65); border-bottom: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(24px); }
         
-        /* 2. SETUP IG OVERLAY */
         #ig-wrapper { position: relative; width: 100%; max-width: 350px; aspect-ratio: 9/16; margin: 0 auto; border-radius: 2rem; overflow: hidden; }
         .ig-placeholder { position: absolute; inset: 0; background: #0a0f1c; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10; cursor: pointer; transition: opacity 0.5s ease; border: 1px solid rgba(255,255,255,0.1); }
         .ig-placeholder:hover .ig-play-btn { transform: scale(1.1); background: #10b981; color: #030712; }
         .ig-play-btn { transition: all 0.3s ease; }
 
-        /* 3. CSS MENU DROPDOWN & MENU MOBILE */
         .dropdown-group:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
         .dropdown-menu { opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; pointer-events: none; }
-        #mobile-menu { transition: transform 0.3s ease-in-out; }
-        .translate-x-full { transform: translateX(100%); }
-        .translate-x-0 { transform: translateX(0); }
-
-        /* 4. JARVIS TITAN PROTOCOL - DUAL CTA WIDGET */
+        
         @media (max-width: 768px) { body { padding-bottom: 120px !important; } }
         .jarvis-agency-link { color: #334155; text-decoration: none; transition: all 0.3s ease; }
         .jarvis-agency-link:hover { color: #10b981; font-weight: bold; }
@@ -127,18 +117,14 @@
 </head>
 <body class="text-slate-400 font-sans antialiased min-h-screen flex flex-col selection:bg-auraEmerald selection:text-black">
 
-    <!-- ================= 3. AURA HEADER & MOBILE MENU (FULL SYSTEM) ================= -->
     <nav class="fixed w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                
-                <!-- LOGO -->
                 <a href="/" class="flex items-center gap-3 group z-50">
                     <span class="text-2xl font-black tracking-wider text-white group-hover:text-auraEmerald transition-colors drop-shadow-lg">ARSA<span class="text-auraEmerald group-hover:text-white transition-colors">TERA</span></span>
                     <span class="hidden sm:inline-block px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] font-bold text-auraEmerald uppercase tracking-widest backdrop-blur-md">Co-Living</span>
                 </a>
                 
-                <!-- MENU DESKTOP DROPDOWN -->
                 <div class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-300">
                     <a href="/" class="text-auraEmerald font-bold relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-auraEmerald after:shadow-[0_0_10px_#10b981]">BERANDA</a>
                     
@@ -157,7 +143,6 @@
                     <a href="#reservasi" class="hover:text-white transition-colors">RESERVASI</a>
                 </div>
 
-                <!-- TOMBOL KANAN & HAMBURGER MOBILE -->
                 <div class="flex items-center gap-4 z-50">
                     <a href="https://wa.me/6285111367588" target="_blank" class="hidden md:flex relative items-center gap-2 px-6 py-2.5 rounded-full font-extrabold text-xs text-obsidian bg-auraEmerald overflow-hidden group">
                         <span class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
@@ -171,18 +156,16 @@
             </div>
         </div>
 
-        <!-- MENU MOBILE TERSEMBUNYI (DIPERBAIKI 100%) -->
+        <!-- MENU MOBILE TERSEMBUNYI (DENGAN ACCORDION) -->
         <div id="mobile-menu" class="fixed inset-0 bg-[#030712]/98 backdrop-blur-xl z-40 transform translate-x-full flex flex-col pt-24 px-6 pb-8 border-l border-white/10 lg:hidden overflow-y-auto transition-transform duration-300">
             <div class="flex flex-col gap-6 text-lg font-bold text-slate-200 w-full">
                 <a href="/" class="text-auraEmerald pb-2 border-b border-white/10">Beranda</a>
                 
-                <!-- MENU DROPDOWN MOBILE (ACCORDION) -->
                 <div class="border-b border-white/10 pb-2">
                     <button id="mobile-dropdown-btn" class="w-full flex justify-between items-center hover:text-white focus:outline-none">
                         Tipe Kamar
                         <svg id="mobile-dropdown-icon" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <!-- Sub-menu -->
                     <div id="mobile-dropdown-menu" class="hidden flex-col gap-4 pl-4 pt-4 text-base font-semibold text-slate-400">
                         <a href="tipe-kamar/mezzanine-harian.html" class="hover:text-auraEmerald block">Mezzanine (Harian)</a>
                         <a href="#" class="hover:text-auraEmerald block">Mezzanine (Bulanan)</a>
@@ -201,15 +184,13 @@
 
     <main class="pt-32 pb-16 flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
-        <!-- ================= HERO SECTION (HIDDEN GEM) ================= -->
-        <!-- URL GAMBAR DIGANTI KE FOTO KAMAR BERSIH AGAR TIDAK ADA TEKS BERTUMPUK -->
+        <!-- ================= HERO SECTION DENGAN GAMBAR BERSIH (TANPA TEKS OVERLAP) ================= -->
         <section class="mb-24 pt-8 lg:pt-16 relative bg-cover bg-center bg-no-repeat rounded-3xl border border-white/10 overflow-hidden" style="background-image: linear-gradient(to right, rgba(3,7,18,0.98), rgba(3,7,18,0.85)), url('https://dongkrakusaha.com/gambarbebas/1142920260821-011235_penginapan-mezzanine-cirebon-arsa-tera-01.jpg');">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center px-6 lg:px-12 py-12">
                 
                 <div class="lg:col-span-4 order-2 lg:order-1 flex justify-center lg:justify-start relative">
                     <div class="absolute inset-0 bg-auraEmerald/20 blur-[100px] rounded-full pointer-events-none scale-75"></div>
                     
-                    <!-- AREA VIDEO IG LAZY LOAD -->
                     <div id="ig-wrapper" class="shadow-[0_0_50px_rgba(16,185,129,0.15)] animate-border-glow">
                         <div id="ig-placeholder" class="ig-placeholder" onclick="loadIGVideo()">
                             <img src="https://dongkrakusaha.com/gambarbebas/1142920260821-011235_penginapan-mezzanine-cirebon-arsa-tera-01.jpg" alt="Arsa Tera Room" class="absolute inset-0 w-full h-full object-cover opacity-40">
@@ -257,7 +238,8 @@
 
             </div>
         </section>
-		<!-- ================= RESTORASI 1: BENTO GRID (TENTANG & LIVE TOUR) ================= -->
+
+        <!-- ================= RESTORASI 1: BENTO GRID (TENTANG) ================= -->
         <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 mt-16">
             <div class="md:col-span-2 glass-card p-8 lg:p-10 relative overflow-hidden group">
                 <div class="absolute -right-32 -bottom-32 w-64 h-64 bg-auraEmerald/10 blur-[80px] rounded-full pointer-events-none transition-all group-hover:bg-auraEmerald/20"></div>
@@ -270,15 +252,12 @@
             <div class="md:col-span-1 bg-gradient-to-b from-[#111827] to-[#030712] rounded-3xl p-1 relative overflow-hidden group border border-white/5 hover:border-auraEmerald/40 transition-colors shadow-xl">
                 <div class="absolute inset-0 bg-auraEmerald/5 blur-xl group-hover:bg-auraEmerald/10 transition-colors"></div>
                 <div class="relative h-full bg-[#0b0f19] rounded-[1.4rem] p-8 flex flex-col justify-center items-start z-10 border border-white/5">
-                    
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-auraEmerald/30 bg-auraEmerald/10 mb-6">
                         <span class="w-2 h-2 rounded-full bg-auraEmerald live-pulse"></span>
                         <span class="text-[10px] font-extrabold text-auraEmerald tracking-widest uppercase">Virtual Tour</span>
                     </div>
-                    
                     <h3 class="text-2xl font-bold text-white mb-3">Intip Suasana Asli</h3>
                     <p class="text-sm text-slate-400 mb-8 leading-relaxed">Lihat langsung kebersihan kamar dan fasilitas Open Kitchen kami tanpa filter.</p>
-                    
                     <a href="https://www.instagram.com/arsatera.id?igsh=" target="_blank" class="w-full relative group/btn overflow-hidden rounded-xl">
                         <div class="absolute inset-0 bg-gradient-to-r from-auraEmerald to-emerald-600 opacity-90 group-hover/btn:opacity-100 transition-opacity"></div>
                         <div class="relative px-6 py-4 flex justify-between items-center text-obsidian font-bold text-sm">
@@ -290,7 +269,7 @@
             </div>
         </section>
 
-		<!-- ================= RESTORASI 2: 4 BADGES KEUNGGULAN ================= -->
+        <!-- ================= RESTORASI 2: 4 BADGES KEUNGGULAN ================= -->
         <section class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
             <div class="glass-card p-6 flex flex-col items-center justify-center text-center group">
                 <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-4 text-auraEmerald group-hover:bg-auraEmerald group-hover:text-obsidian transition-colors">
@@ -321,32 +300,8 @@
                 <p class="text-xs text-slate-500 mt-1">Perawatan Rutin Terjadwal</p>
             </div>
         </section>
-        
-        <!-- ================= RESTORASI 3: VIDEO FACADE GRID (SEBELUM FORM) ================= -->
-        <!-- PASTE GRID VIDEO INI TEPAT DI ATAS SECTION FORM RESERVASI -->
-        <section class="py-16 mt-20 border-t border-white/5 relative z-10">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Galeri Nyata Arsa Tera</h2>
-                <p class="text-lg text-slate-400">Bukti visual kenyamanan hunian premium yang menanti Anda di Cirebon.</p>
-            </div>
 
-            <!-- GRID FACADE MULTIPLE VIDEO -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- ITEM 1 -->
-                <div class="glass-card relative overflow-hidden group p-0 border border-white/10 hover:border-auraEmerald transition-all duration-300">
-                    <img src="https://dongkrakusaha.com/gambarbebas/1142920260821-011235_penginapan-mezzanine-cirebon-arsa-tera-01.jpg" alt="Kamar Mezzanine" class="w-full h-64 object-cover transform transition duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <!-- ITEM 2 -->
-                <div class="glass-card relative overflow-hidden group p-0 border border-white/10 hover:border-auraEmerald transition-all duration-300">
-                    <img src="https://dongkrakusaha.com/gambarbebas/1142920260821-015226_kost-eksklusif-cirebon-arsa-tera-01.jpg" alt="Dapur Terbuka" class="w-full h-64 object-cover transform transition duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <!-- ITEM 3 -->
-                <div class="glass-card relative overflow-hidden group p-0 border border-white/10 hover:border-auraEmerald transition-all duration-300">
-                    <img src="https://dongkrakusaha.com/gambarbebas/1142920260821-015226_kost-eksklusif-cirebon-arsa-tera-02.jpg" alt="Parkir Luas" class="w-full h-64 object-cover transform transition duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-            </div>
-        </section>
-		<!-- ================= BLOK 2: FASILITAS & USP (BENTO GRID ARSA TERA) ================= -->
+        <!-- ================= BLOK 2: FASILITAS & USP ================= -->
         <section id="fasilitas" class="mb-24 relative z-10 pt-10">
             <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-lg h-1 px-8 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
             <div class="text-center mb-16">
@@ -355,8 +310,6 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Fasilitas 1: Kamar Mezzanine -->
                 <div class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.2)] bg-[#0a0f1c]/50 p-0 md:col-span-2 lg:col-span-2">
                     <div class="relative w-full aspect-video sm:aspect-[21/9] overflow-hidden">
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
@@ -372,7 +325,6 @@
                     </div>
                 </div>
 
-                <!-- Fasilitas 2: Open Space Kitchen -->
                 <div class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.2)] bg-[#0a0f1c]/50 p-0">
                     <div class="relative w-full aspect-video sm:aspect-[4/3] lg:aspect-auto lg:h-full overflow-hidden">
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
@@ -384,7 +336,6 @@
                     </div>
                 </div>
 
-                <!-- Fasilitas 3: Smart TV -->
                 <div class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.2)] bg-[#0a0f1c]/50 p-0">
                     <div class="p-8 flex-grow flex flex-col justify-center items-start bg-gradient-to-br from-[#0b0f19] to-[#030712]">
                         <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-auraEmerald mb-6 group-hover:scale-110 transition-transform">
@@ -395,7 +346,6 @@
                     </div>
                 </div>
 
-                <!-- Fasilitas 4: Free Flow Air -->
                 <div class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.2)] bg-[#0a0f1c]/50 p-0">
                     <div class="p-8 flex-grow flex flex-col justify-center items-start bg-gradient-to-br from-[#0b0f19] to-[#030712]">
                         <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-auraEmerald mb-6 group-hover:scale-110 transition-transform">
@@ -406,7 +356,6 @@
                     </div>
                 </div>
 
-                <!-- Fasilitas 5: Parkir & Keamanan -->
                 <div class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.2)] bg-[#0a0f1c]/50 p-0">
                     <div class="relative w-full h-full min-h-[200px] overflow-hidden">
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
@@ -417,20 +366,17 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             
-            <!-- CTA Darurat -->
             <div class="mt-16 text-center">
                 <p class="text-sm text-slate-500 mb-4">Unit kamar sangat terbatas dan selalu terisi penuh setiap akhir bulan.</p>
-                <a href="https://wa.me/6285111367588?text=Halo%20Admin,%20saya%20sudah%20melihat%20fasilitas%20di%20website.%20Apakah%20kamar%20masih%20tersedia?" 
-                   target="_blank"
-                   class="inline-block bg-auraEmerald hover:bg-emerald-400 text-obsidian font-black py-4 px-10 rounded-full shadow-[0_10px_25px_-5px_rgba(16,185,129,0.5)] transform transition hover:-translate-y-1 text-lg ring-4 ring-emerald-900/50 animate-pulse">
+                <a href="https://wa.me/6285111367588" target="_blank" class="inline-block bg-auraEmerald hover:bg-emerald-400 text-obsidian font-black py-4 px-10 rounded-full shadow-[0_10px_25px_-5px_rgba(16,185,129,0.5)] transform transition hover:-translate-y-1 text-lg ring-4 ring-emerald-900/50 animate-pulse">
                    📞 AMANKAN KAMAR SEKARANG
                 </a>
             </div>
         </section>
-		<!-- ================= PILIHAN TIPE KAMAR (VERTIKAL 9:16) ================= -->
+
+        <!-- ================= PILIHAN TIPE KAMAR (VERTIKAL 9:16) ================= -->
         <section class="mb-24 relative">
             <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-lg h-1 px-8 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
             <div class="text-center mb-16 pt-10">
@@ -439,7 +385,6 @@
             </div>
             
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                <!-- Card 1 -->
                 <a href="tipe-kamar/mezzanine-harian.html" class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 p-0">
                     <div class="relative w-full aspect-[9/16] max-h-[400px] overflow-hidden">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
@@ -451,7 +396,6 @@
                     </div>
                 </a>
 
-                <!-- Card 2 -->
                 <a href="tipe-kamar/mezzanine-harian.html" class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 p-0">
                     <div class="relative w-full aspect-[9/16] max-h-[400px] overflow-hidden">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
@@ -463,7 +407,6 @@
                     </div>
                 </a>
 
-                <!-- Card 3 -->
                 <a href="https://wa.me/6285111367588" target="_blank" class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 p-0">
                     <div class="relative w-full aspect-[9/16] max-h-[400px] overflow-hidden">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
@@ -475,7 +418,6 @@
                     </div>
                 </a>
 
-                <!-- Card 4 -->
                  <a href="https://wa.me/6285111367588" target="_blank" class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 p-0">
                     <div class="relative w-full aspect-[9/16] max-h-[400px] overflow-hidden">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
@@ -489,7 +431,7 @@
             </div>
         </section>
 
-        <!-- ================= INFO LAYANAN (ADAPTASI DARI FUNGSI CONTAINER) ================= -->
+        <!-- ================= INFO LAYANAN ================= -->
         <section class="mb-24 relative">
             <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-lg h-1 px-8 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
             
@@ -504,14 +446,14 @@
                         <h3 class="text-auraEmerald font-bold text-xl mb-4">Staycation Estetik</h3>
                         <p class="text-slate-300 text-sm leading-relaxed mb-6">Nikmati liburan singkat atau kunjungan bisnis Anda di Cirebon dengan fasilitas <strong class="text-white font-semibold">penginapan estetik harian</strong> kami yang *instagramable* dan nyaman.</p>
                     </div>
-                    <a href="https://wa.me/6285111367588?text=Halo%20Admin,%20mau%20booking%20Staycation%20Harian" target="_blank" class="text-xs text-auraEmerald font-bold uppercase tracking-wider group-hover:text-white transition-colors">Booking Harian →</a>
+                    <a href="https://wa.me/6285111367588" target="_blank" class="text-xs text-auraEmerald font-bold uppercase tracking-wider group-hover:text-white transition-colors">Booking Harian →</a>
                 </div>
                 <div class="glass-card p-8 flex flex-col justify-between group">
                     <div>
                         <h3 class="text-auraEmerald font-bold text-xl mb-4">Kos Bulanan Eksklusif</h3>
                         <p class="text-slate-300 text-sm leading-relaxed mb-6">Pilihan ideal bagi profesional. <strong class="text-white font-semibold">Kos eksklusif Kesambi Cirebon</strong> kami menawarkan ketenangan dan privasi setara hotel dengan harga kos-kosan elit.</p>
                     </div>
-                    <a href="https://wa.me/6285111367588?text=Halo%20Admin,%20mau%20tanya%20Kos%20Bulanan" target="_blank" class="text-xs text-auraEmerald font-bold uppercase tracking-wider group-hover:text-white transition-colors">Info Kos Bulanan →</a>
+                    <a href="https://wa.me/6285111367588" target="_blank" class="text-xs text-auraEmerald font-bold uppercase tracking-wider group-hover:text-white transition-colors">Info Kos Bulanan →</a>
                 </div>
                 <a href="#galeri-proyek" class="glass-card p-0 relative overflow-hidden flex flex-col justify-end min-h-[300px] group md:col-span-2 lg:col-span-1 border-white/10 hover:border-auraEmerald/40">
                     <img loading="lazy" src="https://dongkrakusaha.com/gambarbebas/1142920260821-011235_penginapan-mezzanine-cirebon-arsa-tera-01.jpg" alt="Kamar Mezzanine" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700">
@@ -551,7 +493,6 @@
             </div>
             
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                <!-- Card Edukasi (Akan di-link ke folder /edukasi/ nanti) -->
                 <a href="#dummy" class="glass-card p-2 overflow-hidden group block border-white/5 hover:border-auraEmerald/30">
                     <div class="aspect-[9/16] max-h-[250px] overflow-hidden rounded-2xl relative">
                         <img loading="lazy" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=400" alt="Tips Menata Kamar Mezzanine" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60">
@@ -599,9 +540,7 @@
               <p class="text-lg text-slate-400">Jelajahi setiap sudut kenyamanan Arsa Tera secara virtual.</p>
             </div>
 
-            <!-- GRID FACADE MULTIPLE VIDEO 9:16 -->
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8 justify-items-center">
-
               <!-- ITEM 1 -->
               <div class="video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-full max-w-[320px] aspect-[9/16]" data-video="https://www.instagram.com/p/C-iQ8L-y6eY/embed">
                 <img src="https://dongkrakusaha.com/gambarbebas/1142920260821-011235_penginapan-mezzanine-cirebon-arsa-tera-01.jpg" alt="Room Tour" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110" loading="lazy">
@@ -635,8 +574,8 @@
             </div>
           </div>
         </section>
-		
-		<!-- ================= 3. FORM RESERVASI (WEB3FORMS + WA) ================= -->
+        
+        <!-- ================= 3. FORM RESERVASI (WEB3FORMS + WA) ================= -->
         <section id="reservasi" class="glass-card border-x-0 border-b-0 rounded-none rounded-t-[3rem] p-8 md:p-16 relative overflow-hidden mt-20 border-auraEmerald/20 bg-gradient-to-b from-auraEmerald/5 to-[#030712]">
             <div class="absolute right-0 top-0 w-96 h-96 bg-auraEmerald/10 blur-[120px] pointer-events-none"></div>
             
@@ -690,7 +629,7 @@
             </div>
         </section>
 
-        <!-- ================= FAQ VISUAL (VOICE AI INJECTION) ================= -->
+        <!-- ================= FAQ VISUAL 6 ITEM (VOICE AI INJECTION) ================= -->
         <section class="py-20 border-t border-white/5">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-12">
@@ -699,6 +638,7 @@
                 </div>
                 
                 <div class="space-y-4">
+                    <!-- FAQ 1 -->
                     <div class="glass-card p-6 border-white/5 hover:border-auraEmerald/30 flex gap-4 items-start">
                         <button class="jarvis-voice-btn" data-text="Lokasi kami sangat strategis di pusat kota, tepatnya di Jalan Pembangunan V Blok L Nomor 19, Pekiringan, Kesambi, Cirebon. Sangat dekat dengan Jalan Cipto.">
                             <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
@@ -709,6 +649,7 @@
                         </div>
                     </div>
                     
+                    <!-- FAQ 2 -->
                     <div class="glass-card p-6 border-white/5 hover:border-auraEmerald/30 flex gap-4 items-start">
                         <button class="jarvis-voice-btn" data-text="Harga kamar tipe Mezzanine mulai dari 450 ribu rupiah per malam, atau 3,45 juta rupiah untuk sewa bulanan kos eksklusif.">
                             <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
@@ -719,6 +660,7 @@
                         </div>
                     </div>
 
+                    <!-- FAQ 3 -->
                     <div class="glass-card p-6 border-white/5 hover:border-auraEmerald/30 flex gap-4 items-start">
                         <button class="jarvis-voice-btn" data-text="Tentu saja. Kami mengusung konsep kos eksklusif yang memprioritaskan keamanan 24 jam dan akses fleksibel bebas jam malam bagi penghuni.">
                             <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
@@ -729,6 +671,7 @@
                         </div>
                     </div>
 
+                    <!-- FAQ 4 -->
                     <div class="glass-card p-6 border-white/5 hover:border-auraEmerald/30 flex gap-4 items-start">
                         <button class="jarvis-voice-btn" data-text="Boleh, penghuni diizinkan membawa teman berkunjung ke area komunal atau kamar, namun tetap harus mematuhi aturan jam kunjungan demi kenyamanan penghuni lain.">
                             <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
@@ -739,6 +682,7 @@
                         </div>
                     </div>
 
+                    <!-- FAQ 5 -->
                     <div class="glass-card p-6 border-white/5 hover:border-auraEmerald/30 flex gap-4 items-start">
                         <button class="jarvis-voice-btn" data-text="Area parkir kami sangat memadai untuk kendaraan roda dua maupun mobil roda empat. Biaya parkir sudah gratis dan sudah termasuk dalam harga sewa kamar Anda.">
                             <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
@@ -749,6 +693,7 @@
                         </div>
                     </div>
 
+                    <!-- FAQ 6 -->
                     <div class="glass-card p-6 border-white/5 hover:border-auraEmerald/30 flex gap-4 items-start">
                         <button class="jarvis-voice-btn" data-text="Kami menyediakan layanan pembersihan kamar rutin secara berkala. Untuk laundry pakaian, Anda bisa menghubungi pengurus kos untuk direkomendasikan mitra terdekat kami.">
                             <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
@@ -844,26 +789,26 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             
-            // 1. SCRIPT PENGGERAK MENU MOBILE & ACCORDION (100% FIX)
+            // 1. SCRIPT PENGGERAK MENU MOBILE (HAMBURGER)
             const btn = document.getElementById('menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             
             if(btn && mobileMenu) {
-                // Toggle Menu Mobile
                 btn.addEventListener('click', () => {
                     mobileMenu.classList.toggle('translate-x-full');
+                    mobileMenu.classList.toggle('translate-x-0');
                 });
                 
-                // Tutup menu jika klik link (kecuali tombol Accordion "Tipe Kamar")
                 const mobileLinks = mobileMenu.querySelectorAll('a:not(#mobile-dropdown-btn)');
                 mobileLinks.forEach(link => {
                     link.addEventListener('click', () => {
+                        mobileMenu.classList.remove('translate-x-0');
                         mobileMenu.classList.add('translate-x-full');
                     });
                 });
             }
 
-            // Penggerak Accordion "Tipe Kamar" di Mobile
+            // 1.5. SCRIPT DROPDOWN MENU MOBILE (ACCORDION)
             const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
             const mobileDropdownMenu = document.getElementById('mobile-dropdown-menu');
             const mobileDropdownIcon = document.getElementById('mobile-dropdown-icon');
