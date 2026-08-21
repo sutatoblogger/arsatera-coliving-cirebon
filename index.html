@@ -146,21 +146,62 @@
 </head>
 <body class="text-slate-400 font-sans antialiased min-h-screen flex flex-col selection:bg-auraEmerald selection:text-black">
 
+    <!-- ================= 3. AURA HEADER & MOBILE MENU (RESTORED MULTI-PAGE) ================= -->
     <nav class="fixed w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
+                
+                <!-- LOGO -->
                 <a href="/" class="flex items-center gap-3 group z-50">
                     <span class="text-2xl font-black tracking-wider text-white group-hover:text-auraEmerald transition-colors drop-shadow-lg">ARSA<span class="text-auraEmerald group-hover:text-white transition-colors">TERA</span></span>
                     <span class="hidden sm:inline-block px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] font-bold text-auraEmerald uppercase tracking-widest backdrop-blur-md">Co-Living</span>
                 </a>
                 
+                <!-- MENU DESKTOP DROPDOWN -->
+                <div class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-300">
+                    <a href="/" class="text-auraEmerald font-bold relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-auraEmerald after:shadow-[0_0_10px_#10b981]">BERANDA</a>
+                    
+                    <div class="relative dropdown-group py-6">
+                        <a href="#fasilitas" class="hover:text-white flex items-center gap-1 transition-colors cursor-pointer">TIPE KAMAR <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></a>
+                        <div class="dropdown-menu absolute top-[75px] -left-4 w-64 glass-card p-2 z-50 rounded-2xl border-auraEmerald/20">
+                            <!-- Link ini sudah terhubung ke sub-page yang Anda buat -->
+                            <a href="tipe-kamar/mezzanine-harian.html" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-auraEmerald transition-colors">Mezzanine (Harian)</a>
+                            <a href="#" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-auraEmerald transition-colors">Mezzanine (Bulanan)</a>
+                            <a href="#" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-auraEmerald transition-colors">Sewa Full Guest House</a>
+                            <a href="#" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-auraEmerald transition-colors">Kamar Standar</a>
+                        </div>
+                    </div>
+
+                    <a href="#fasilitas" class="hover:text-white transition-colors">FASILITAS</a>
+                    <a href="#galeri-proyek" class="hover:text-white transition-colors">ROOM TOUR</a>
+                    <a href="#reservasi" class="hover:text-white transition-colors">RESERVASI</a>
+                </div>
+
+                <!-- TOMBOL KANAN & HAMBURGER MOBILE -->
                 <div class="flex items-center gap-4 z-50">
-                    <a href="https://wa.me/6285111367588" target="_blank" class="relative items-center gap-2 px-6 py-2.5 rounded-full font-extrabold text-xs text-obsidian bg-auraEmerald overflow-hidden group">
+                    <a href="https://wa.me/6285111367588" target="_blank" class="hidden md:flex relative items-center gap-2 px-6 py-2.5 rounded-full font-extrabold text-xs text-obsidian bg-auraEmerald overflow-hidden group">
                         <span class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
                         <span class="relative z-10 flex items-center gap-2">Reservasi WA <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
                     </a>
+                    
+                    <!-- Tombol Hamburger Mobile (Skrip JS-nya sudah stand-by di bawah) -->
+                    <button id="menu-btn" class="lg:hidden p-2 text-white hover:text-auraEmerald focus:outline-none bg-white/5 rounded-lg border border-white/10">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
                 </div>
             </div>
+        </div>
+
+        <!-- MENU MOBILE TERSEMBUNYI -->
+        <div id="mobile-menu" class="fixed inset-0 bg-[#030712]/95 backdrop-blur-xl z-40 transform translate-x-full flex flex-col pt-24 px-6 pb-8 border-l border-white/10 lg:hidden">
+            <div class="flex flex-col gap-6 text-lg font-bold text-slate-200">
+                <a href="/" class="text-auraEmerald pb-2 border-b border-white/10">Beranda</a>
+                <a href="tipe-kamar/mezzanine-harian.html" class="hover:text-white pb-2 border-b border-white/10 flex justify-between">Mezzanine Harian <span>→</span></a>
+                <a href="#fasilitas" class="hover:text-white pb-2 border-b border-white/10">Fasilitas</a>
+                <a href="#galeri-proyek" class="hover:text-white pb-2 border-b border-white/10">Room Tour</a>
+                <a href="#reservasi" class="hover:text-white pb-2 border-b border-white/10">Reservasi</a>
+            </div>
+            <a href="https://wa.me/6285111367588" target="_blank" class="mt-auto block w-full py-4 bg-auraEmerald text-obsidian text-center font-extrabold rounded-xl shadow-[0_0_20px_rgba(16,185,129,0.3)]">Hubungi Admin Sekarang</a>
         </div>
     </nav>
 
