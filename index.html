@@ -14,7 +14,7 @@
     
     <link rel="canonical" href="https://arsatera-coliving-cirebon.vercel.app/">
 
-    <!-- JSON-LD GOD-TIER -->
+    <!-- JSON-LD GOD-TIER (LocalBusiness, WebSite, & FAQPage Schema) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -28,6 +28,10 @@
           "telephone": "+6285111367588",
           "priceRange": "Rp 450.000 - Rp 3.450.000",
           "description": "Layanan penyewaan penginapan harian dan kos eksklusif bulanan dengan konsep kamar mezzanine modern di Cirebon.",
+          "sameAs": [
+            "https://www.instagram.com/arsatera.id?igsh=",
+            "https://maps.app.goo.gl/seXHVvHvcqf9Myvp8"
+          ],
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Jl. Pembangunan V Blok L No.19, RT.05/RW.05, Pekiringan, Kec. Kesambi",
@@ -40,6 +44,52 @@
             "latitude": -6.7261364,
             "longitude": 108.5468977
           }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://arsatera-coliving-cirebon.vercel.app/#website",
+          "url": "https://arsatera-coliving-cirebon.vercel.app/",
+          "name": "Arsa Tera Guest House & Co-Living",
+          "publisher": {
+            "@id": "https://arsatera-coliving-cirebon.vercel.app/#organization"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Di mana lokasi pasti Arsa Tera Co-Living?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Lokasi kami sangat strategis di pusat kota, tepatnya di Jalan Pembangunan V Blok L Nomor 19, Pekiringan, Kesambi, Cirebon. Sangat dekat dengan Jalan Cipto."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Berapa harga sewa kamar Mezzanine?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Harga kamar tipe Mezzanine mulai dari 450 ribu rupiah per malam, atau 3,45 juta rupiah untuk sewa bulanan kos eksklusif."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah ini kos bebas jam malam?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tentu saja. Kami mengusung konsep kos eksklusif yang memprioritaskan keamanan 24 jam dan akses fleksibel bebas jam malam bagi penghuni."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah ada biaya tambahan untuk parkir mobil?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tidak ada. Fasilitas parkir luas kami gratis 100% untuk penghuni. Area parkir kami sangat memadai untuk kendaraan roda dua maupun mobil roda empat."
+              }
+            }
+          ]
         }
       ]
     }
@@ -136,9 +186,9 @@
                         <a href="#fasilitas" class="hover:text-white flex items-center gap-1 transition-colors cursor-pointer">TIPE KAMAR <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></a>
                         <div class="dropdown-menu absolute top-[75px] -left-4 w-64 glass-card p-2 z-50 rounded-2xl border-auraEmerald/20">
                             <a href="tipe-kamar/mezzanine-harian.html" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-auraEmerald transition-colors">Mezzanine (Harian)</a>
-                            <a href="#" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-auraEmerald transition-colors">Mezzanine (Bulanan)</a>
-                            <a href="#" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-auraEmerald transition-colors">Sewa Full Guest House</a>
-                            <a href="#" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-auraEmerald transition-colors">Kamar Standar</a>
+                            <a href="tipe-kamar/mezzanine-bulanan.html" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-auraEmerald transition-colors">Mezzanine (Bulanan)</a>
+                            <a href="tipe-kamar/sewa-full-guest-house.html" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-auraEmerald transition-colors">Sewa Full Guest House</a>
+                            <a href="tipe-kamar/kamar-standar.html" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-auraEmerald transition-colors">Kamar Standar</a>
                         </div>
                     </div>
 
@@ -174,10 +224,10 @@
                     </button>
                     <!-- Sub-menu -->
                     <div id="mobile-dropdown-menu" class="hidden flex-col gap-5 pl-4 pt-5 text-base font-semibold text-slate-300">
-                        <a href="tipe-kamar/mezzanine-harian.html" class="hover:text-auraEmerald block">Mezzanine (Harian)</a>
-                        <a href="#" class="hover:text-auraEmerald block">Mezzanine (Bulanan)</a>
-                        <a href="#" class="hover:text-auraEmerald block">Sewa Full Guest House</a>
-                        <a href="#" class="hover:text-auraEmerald block">Kamar Standar</a>
+                        <a href="tipe-kamar/mezzanine-harian.html" class="hover:text-auraEmerald block transition-colors">Mezzanine (Harian)</a>
+                        <a href="tipe-kamar/mezzanine-bulanan.html" class="hover:text-auraEmerald block transition-colors">Mezzanine (Bulanan)</a>
+                        <a href="tipe-kamar/sewa-full-guest-house.html" class="hover:text-auraEmerald block transition-colors">Sewa Full Guest House</a>
+                        <a href="tipe-kamar/kamar-standar.html" class="hover:text-auraEmerald block transition-colors">Kamar Standar</a>
                     </div>
                 </div>
 
@@ -397,46 +447,50 @@
             </div>
             
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                <a href="tipe-kamar/mezzanine-harian.html" class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 p-0">
+                <!-- Card 1: Mezzanine Bulanan -->
+                <a href="tipe-kamar/mezzanine-bulanan.html" class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 p-0">
                     <div class="relative w-full aspect-[9/16] max-h-[400px] overflow-hidden">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
                         <img loading="lazy" src="https://dongkrakusaha.com/gambarbebas/1142920260821-011235_penginapan-mezzanine-cirebon-arsa-tera-01.jpg" alt="Kamar Mezzanine Bulanan" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute bottom-0 left-0 w-full p-4 z-20 bg-gradient-to-t from-[#030712] to-transparent text-center">
                             <h4 class="text-white font-extrabold text-sm md:text-base group-hover:text-auraEmerald transition-colors">Mezzanine (Bulanan)</h4>
-                            <span class="mt-1 text-[10px] font-bold text-auraEmerald uppercase tracking-widest flex items-center justify-center gap-1">Detail <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></span>
+                            <span class="mt-1 text-[10px] font-bold text-auraEmerald uppercase tracking-widest flex items-center justify-center gap-1">Detail Kamar <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></span>
                         </div>
                     </div>
                 </a>
 
+                <!-- Card 2: Mezzanine Harian -->
                 <a href="tipe-kamar/mezzanine-harian.html" class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 p-0">
                     <div class="relative w-full aspect-[9/16] max-h-[400px] overflow-hidden">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
                         <img loading="lazy" src="https://dongkrakusaha.com/gambarbebas/1142920260821-015226_kost-eksklusif-cirebon-arsa-tera.jpg" alt="Kamar Mezzanine Harian" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute bottom-0 left-0 w-full p-4 z-20 bg-gradient-to-t from-[#030712] to-transparent text-center">
                             <h4 class="text-white font-extrabold text-sm md:text-base group-hover:text-auraEmerald transition-colors">Mezzanine (Harian)</h4>
-                            <span class="mt-1 text-[10px] font-bold text-auraEmerald uppercase tracking-widest flex items-center justify-center gap-1">Detail <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></span>
+                            <span class="mt-1 text-[10px] font-bold text-auraEmerald uppercase tracking-widest flex items-center justify-center gap-1">Detail Kamar <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></span>
                         </div>
                     </div>
                 </a>
 
-                <a href="https://wa.me/6285111367588" target="_blank" class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 p-0">
+                <!-- Card 3: Sewa Full Rumah -->
+                <a href="tipe-kamar/sewa-full-guest-house.html" class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 p-0">
                     <div class="relative w-full aspect-[9/16] max-h-[400px] overflow-hidden">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
                         <img loading="lazy" src="https://dongkrakusaha.com/gambarbebas/1142920260821-015226_kost-eksklusif-cirebon-arsa-tera-01.jpg" alt="Sewa 1 Rumah" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute bottom-0 left-0 w-full p-4 z-20 bg-gradient-to-t from-[#030712] to-transparent text-center">
                             <h4 class="text-white font-extrabold text-sm md:text-base group-hover:text-auraEmerald transition-colors">Sewa Full Rumah</h4>
-                            <span class="mt-1 text-[10px] font-bold text-auraEmerald uppercase tracking-widest flex items-center justify-center gap-1">Tanya WA <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></span>
+                            <span class="mt-1 text-[10px] font-bold text-auraEmerald uppercase tracking-widest flex items-center justify-center gap-1">Detail Fasilitas <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></span>
                         </div>
                     </div>
                 </a>
 
-                 <a href="https://wa.me/6285111367588" target="_blank" class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 p-0">
+                 <!-- Card 4: Kamar Standar -->
+                 <a href="tipe-kamar/kamar-standar.html" class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 p-0">
                     <div class="relative w-full aspect-[9/16] max-h-[400px] overflow-hidden">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
                         <img loading="lazy" src="https://dongkrakusaha.com/gambarbebas/1142920260821-015226_kost-eksklusif-cirebon-arsa-tera-02.jpg" alt="Kamar Tipe Standar" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute bottom-0 left-0 w-full p-4 z-20 bg-gradient-to-t from-[#030712] to-transparent text-center">
                             <h4 class="text-white font-extrabold text-sm md:text-base group-hover:text-auraEmerald transition-colors">Kamar Standar</h4>
-                            <span class="mt-1 text-[10px] font-bold text-auraEmerald uppercase tracking-widest flex items-center justify-center gap-1">Tanya WA <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></span>
+                            <span class="mt-1 text-[10px] font-bold text-auraEmerald uppercase tracking-widest flex items-center justify-center gap-1">Detail Kamar <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></span>
                         </div>
                     </div>
                 </a>
@@ -505,39 +559,46 @@
             </div>
             
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                <a href="#dummy" class="glass-card p-2 overflow-hidden group block border-white/5 hover:border-auraEmerald/30">
+                <!-- Artikel 1 -->
+                <a href="edukasi/tips-menata-mezzanine.html" class="glass-card p-2 overflow-hidden group block border-white/5 hover:border-auraEmerald/30">
                     <div class="aspect-[9/16] max-h-[250px] overflow-hidden rounded-2xl relative">
                         <img loading="lazy" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=400" alt="Tips Menata Kamar Mezzanine" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-4 flex flex-col justify-end">
                             <span class="text-[9px] text-auraEmerald font-bold mb-1 block uppercase tracking-widest">Dekorasi</span>
-                            <h4 class="text-white font-bold text-sm leading-snug line-clamp-2">Tips Menata Kamar Mezzanine</h4>
+                            <h4 class="text-white font-bold text-sm leading-snug line-clamp-2">Tips Cerdas Menata Kamar Mezzanine</h4>
                         </div>
                     </div>
                 </a>
-                <a href="#dummy" class="glass-card p-2 overflow-hidden group block border-white/5 hover:border-auraEmerald/30">
+                
+                <!-- Artikel 2 -->
+                <a href="edukasi/kuliner-malam-cipto.html" class="glass-card p-2 overflow-hidden group block border-white/5 hover:border-auraEmerald/30">
                     <div class="aspect-[9/16] max-h-[250px] overflow-hidden rounded-2xl relative">
                         <img loading="lazy" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=400" alt="Kuliner Cirebon" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-4 flex flex-col justify-end">
-                            <span class="text-[9px] text-auraEmerald font-bold mb-1 block uppercase tracking-widest">Kuliner</span>
-                            <h4 class="text-white font-bold text-sm leading-snug line-clamp-2">Kuliner Dekat Jalan Cipto</h4>
+                            <span class="text-[9px] text-auraEmerald font-bold mb-1 block uppercase tracking-widest">Kuliner Lokal</span>
+                            <h4 class="text-white font-bold text-sm leading-snug line-clamp-2">Rekomendasi Kuliner Dekat Jalan Cipto</h4>
                         </div>
                     </div>
                 </a>
-                <a href="#dummy" class="glass-card p-2 overflow-hidden group block border-white/5 hover:border-auraEmerald/30">
+
+                <!-- Artikel 3 -->
+                <a href="edukasi/konsep-coliving-nyaman.html" class="glass-card p-2 overflow-hidden group block border-white/5 hover:border-auraEmerald/30">
                     <div class="aspect-[9/16] max-h-[250px] overflow-hidden rounded-2xl relative">
                         <img loading="lazy" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=400" alt="Etika Co-Living" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-4 flex flex-col justify-end">
                             <span class="text-[9px] text-auraEmerald font-bold mb-1 block uppercase tracking-widest">Gaya Hidup</span>
-                            <h4 class="text-white font-bold text-sm leading-snug line-clamp-2">Memahami Konsep Co-Living</h4>
+                            <h4 class="text-white font-bold text-sm leading-snug line-clamp-2">Memahami Konsep Nyaman Co-Living</h4>
                         </div>
                     </div>
                 </a>
-                <a href="#dummy" class="glass-card p-2 overflow-hidden group block border-white/5 hover:border-auraEmerald/30">
+
+                <!-- Artikel 4 -->
+                <a href="edukasi/wfh-fokus-kamar-kos.html" class="glass-card p-2 overflow-hidden group block border-white/5 hover:border-auraEmerald/30">
                     <div class="aspect-[9/16] max-h-[250px] overflow-hidden rounded-2xl relative">
                         <img loading="lazy" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=400" alt="Kerja Kos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-4 flex flex-col justify-end">
-                            <span class="text-[9px] text-auraEmerald font-bold mb-1 block uppercase tracking-widest">Kerja</span>
-                            <h4 class="text-white font-bold text-sm leading-snug line-clamp-2">Tetap Produktif WFH di Kos</h4>
+                            <span class="text-[9px] text-auraEmerald font-bold mb-1 block uppercase tracking-widest">Produktivitas</span>
+                            <h4 class="text-white font-bold text-sm leading-snug line-clamp-2">Cara Tetap Fokus WFH dari Kamar Kos</h4>
                         </div>
                     </div>
                 </a>
