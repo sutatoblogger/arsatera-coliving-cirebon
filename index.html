@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Arsa Tera Guest House & Co-Living | Kos Eksklusif Cirebon</title>
-    <link rel="preload" as="image" href="https://dongkrakusaha.com/gambarbebas/1142920260821-011235_penginapan-mezzanine-cirebon-arsa-tera-01.jpg" fetchpriority="high">
+    <!-- Preload Gambar Hero Utama -->
+    <link rel="preload" as="image" href="guest-house-pusat-kota-cirebon-arsa-tera.webp" fetchpriority="high">
     <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
     <meta name="description" content="Arsa Tera Guest House tawarkan kamar tingkat Instagramable, Smart TV, Open Kitchen & promo khusus di Kesambi Cirebon. Booking sebelum penuh!">
     <meta name="keywords" content="kost eksklusif cirebon, penginapan mezzanine cirebon, guest house unik cirebon, kos bulanan kesambi cirebon">
@@ -23,13 +24,13 @@
           "@type": "LocalBusiness",
           "@id": "https://arsatera-coliving-cirebon.vercel.app/#organization",
           "name": "Arsa Tera Guest House & Co-Living",
-          "image": "https://dongkrakusaha.com/gambarbebas/1142920260821-015226_kost-eksklusif-cirebon-arsa-tera.jpg",
+          "image": "guest-house-pusat-kota-cirebon-arsa-tera.webp",
           "url": "https://arsatera-coliving-cirebon.vercel.app/",
           "telephone": "+6285111367588",
           "priceRange": "Rp 450.000 - Rp 3.450.000",
           "description": "Layanan penyewaan penginapan harian dan kos eksklusif bulanan dengan konsep kamar mezzanine modern di Cirebon.",
           "sameAs": [
-            "https://www.instagram.com/arsatera.id?igsh=",
+            "https://www.instagram.com/arsatera.id",
             "https://maps.app.goo.gl/seXHVvHvcqf9Myvp8"
           ],
           "address": {
@@ -242,12 +243,19 @@
 
     <main class="pt-32 pb-16 flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
-        <!-- ================= HERO SECTION (BACKGROUND & IG FACADE) ================= -->
-        <section class="mb-24 pt-8 lg:pt-16 relative bg-cover bg-center bg-no-repeat rounded-3xl border border-white/10 overflow-hidden shadow-2xl" style="background-image: linear-gradient(to right, rgba(3,7,18,0.98), rgba(3,7,18,0.85)), url('guest-house-pusat-kota-cirebon-arsa-tera.webp');">
+        <!-- ================= HERO SECTION (ANTI TUMPANG TINDIH) ================= -->
+        <section class="mb-24 pt-8 lg:pt-16 relative rounded-3xl border border-white/10 overflow-hidden shadow-2xl min-h-[600px] flex items-center">
+            
+            <!-- GAMBAR BACKGROUND MURNI (ANTI GRADIENT ERROR) -->
+            <img src="guest-house-pusat-kota-cirebon-arsa-tera.webp" alt="Arsa Tera Guest House" class="absolute inset-0 w-full h-full object-cover">
+            
+            <!-- LAPISAN KEGELAPAN (OVERLAY) -->
+            <div class="absolute inset-0 bg-gradient-to-r from-[#030712] via-[#030712]/90 to-[#030712]/60"></div>
+            
             <!-- Elemen Cahaya Hijau -->
             <div class="absolute inset-0 bg-auraEmerald/5 blur-[120px] rounded-full pointer-events-none scale-150 transform -translate-y-1/2"></div>
             
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center px-6 lg:px-12 py-12 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center px-6 lg:px-12 relative z-10 w-full py-12">
                 
                 <div class="lg:col-span-4 order-2 lg:order-1 flex justify-center lg:justify-start relative">
                     <div class="absolute inset-0 bg-auraEmerald/20 blur-[100px] rounded-full pointer-events-none scale-75"></div>
@@ -255,12 +263,16 @@
                     <!-- AREA VIDEO IG LAZY LOAD -->
                     <div id="ig-wrapper" class="shadow-[0_0_50px_rgba(16,185,129,0.15)] animate-border-glow">
                         <div id="ig-placeholder" class="ig-placeholder" onclick="loadIGVideo()">
-                            <img src="pintu-masuk-kos-eksklusif-kesambi-cirebon.webp" alt="Pintu Masuk Kos Eksklusif Kesambi Cirebon" class="absolute inset-0 w-full h-full object-cover opacity-50">
+                            <!-- GAMBAR DITERANGKAN & EYE-CATCHING -->
+                            <img src="pintu-masuk-kos-eksklusif-kesambi-cirebon.webp" alt="Video Lobi Arsa Tera" class="absolute inset-0 w-full h-full object-cover opacity-80">
+                            <!-- Gradient bawah saja agar teks terbaca -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                            
                             <div class="relative z-20 flex flex-col items-center justify-center h-full">
-                                <div class="ig-play-btn w-16 h-16 rounded-full bg-white/10 border-2 border-auraEmerald flex items-center justify-center text-auraEmerald mb-4 backdrop-blur-sm">
+                                <div class="ig-play-btn w-16 h-16 rounded-full bg-white/20 border-2 border-auraEmerald flex items-center justify-center text-auraEmerald mb-4 backdrop-blur-md shadow-lg">
                                     <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                                 </div>
-                                <span class="text-white text-xs font-bold uppercase tracking-widest bg-obsidian/60 px-4 py-1.5 rounded-full border border-white/10">Lihat Room Tour</span>
+                                <span class="text-white text-xs font-bold uppercase tracking-widest bg-obsidian/80 px-4 py-1.5 rounded-full border border-auraEmerald/50 shadow-md">Lihat Room Tour</span>
                             </div>
                         </div>
                         <div id="ig-iframe-container" class="w-full h-full"></div>
@@ -268,7 +280,7 @@
                 </div>
 
                 <div class="lg:col-span-8 order-1 lg:order-2 text-center lg:text-left relative z-10">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs font-semibold text-slate-300 mb-8 backdrop-blur-md shadow-lg">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs font-semibold text-slate-200 mb-8 backdrop-blur-md shadow-lg">
                         <span class="w-2 h-2 rounded-full bg-auraEmerald animate-pulse"></span> Kos Eksklusif & Guest House Pusat Kota
                     </div>
                     
@@ -301,7 +313,7 @@
             </div>
         </section>
 
-        <!-- ================= RESTORASI 1: BENTO GRID (TENTANG) ================= -->
+        <!-- ================= BENTO GRID (TENTANG) ================= -->
         <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 mt-16">
             <div class="md:col-span-2 glass-card p-8 lg:p-10 relative overflow-hidden group">
                 <div class="absolute -right-32 -bottom-32 w-64 h-64 bg-auraEmerald/10 blur-[80px] rounded-full pointer-events-none transition-all group-hover:bg-auraEmerald/20"></div>
@@ -320,7 +332,7 @@
                     </div>
                     <h3 class="text-2xl font-bold text-white mb-3">Intip Suasana Asli</h3>
                     <p class="text-sm text-slate-400 mb-8 leading-relaxed">Lihat langsung kebersihan kamar dan fasilitas Open Kitchen kami tanpa filter.</p>
-                    <a href="https://www.instagram.com/arsatera.id?igsh=" target="_blank" class="w-full relative group/btn overflow-hidden rounded-xl">
+                    <a href="https://www.instagram.com/arsatera.id" target="_blank" class="w-full relative group/btn overflow-hidden rounded-xl">
                         <div class="absolute inset-0 bg-gradient-to-r from-auraEmerald to-emerald-600 opacity-90 group-hover/btn:opacity-100 transition-opacity"></div>
                         <div class="relative px-6 py-4 flex justify-between items-center text-obsidian font-bold text-sm">
                             <span>Buka Galeri Instagram</span>
@@ -331,7 +343,7 @@
             </div>
         </section>
 
-        <!-- ================= RESTORASI 2: 4 BADGES KEUNGGULAN ================= -->
+        <!-- ================= 4 BADGES KEUNGGULAN ================= -->
         <section class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
             <div class="glass-card p-6 flex flex-col items-center justify-center text-center group">
                 <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-4 text-auraEmerald group-hover:bg-auraEmerald group-hover:text-obsidian transition-colors">
@@ -372,11 +384,11 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Fasilitas 1 (Mezzanine) -->
                 <div class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.2)] bg-[#0a0f1c]/50 p-0 md:col-span-2 lg:col-span-2">
                     <div class="relative w-full aspect-video sm:aspect-[21/9] overflow-hidden">
-                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
-                        <img loading="lazy" src="https://dongkrakusaha.com/gambarbebas/1142920260821-011235_penginapan-mezzanine-cirebon-arsa-tera-01.jpg" alt="Kamar Mezzanine Arsa Tera" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 p-6 md:p-8 z-20 w-full bg-gradient-to-t from-[#030712] to-transparent">
+                        <img loading="lazy" src="desain-kamar-kos-mezzanine-cirebon.webp" alt="Kamar Mezzanine Arsa Tera" class="w-full h-full object-cover opacity-90 transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 p-6 md:p-8 z-20 w-full bg-gradient-to-t from-[#030712] via-[#030712]/80 to-transparent">
                             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-auraEmerald/30 bg-auraEmerald/10 mb-3 backdrop-blur-sm">
                                 <span class="w-2 h-2 rounded-full bg-auraEmerald animate-pulse"></span>
                                 <span class="text-[10px] font-extrabold text-auraEmerald tracking-widest uppercase">Signature Room</span>
@@ -387,11 +399,11 @@
                     </div>
                 </div>
 
+                <!-- Fasilitas 2 (Open Kitchen) -->
                 <div class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.2)] bg-[#0a0f1c]/50 p-0">
                     <div class="relative w-full aspect-video sm:aspect-[4/3] lg:aspect-auto lg:h-full overflow-hidden">
-                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
-                        <img loading="lazy" src="https://dongkrakusaha.com/gambarbebas/1142920260821-015226_kost-eksklusif-cirebon-arsa-tera-01.jpg" alt="Open Space Kitchen" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 p-6 z-20 w-full bg-gradient-to-t from-[#030712] to-transparent">
+                        <img loading="lazy" src="dapur-bersama-kos-eksklusif-cirebon.webp" alt="Open Space Kitchen" class="w-full h-full object-cover opacity-90 transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 p-6 z-20 w-full bg-gradient-to-t from-[#030712] via-[#030712]/80 to-transparent">
                             <h3 class="text-xl font-bold text-white mb-2">Open Space Kitchen</h3>
                             <p class="text-slate-300 text-sm">Dapur komunal luas, bersih, dan estetik. Lengkap dengan fasilitas memasak modern untuk berkreasi bersama penghuni lain.</p>
                         </div>
@@ -418,11 +430,11 @@
                     </div>
                 </div>
 
+                <!-- Fasilitas 5 (Parkir) -->
                 <div class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.2)] bg-[#0a0f1c]/50 p-0">
                     <div class="relative w-full h-full min-h-[200px] overflow-hidden">
-                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
-                        <img loading="lazy" src="https://dongkrakusaha.com/gambarbebas/1142920260821-015226_kost-eksklusif-cirebon-arsa-tera-02.jpg" alt="Parkir Luas Arsa Tera" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 p-6 z-20 w-full bg-gradient-to-t from-[#030712] to-transparent">
+                        <img loading="lazy" src="guest-house-pusat-kota-cirebon-arsa-tera.webp" alt="Parkir Luas Arsa Tera" class="w-full h-full object-cover opacity-90 transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 p-6 z-20 w-full bg-gradient-to-t from-[#030712] via-[#030712]/80 to-transparent">
                             <h3 class="text-xl font-bold text-white mb-2">Keamanan & Parkir Bebas</h3>
                             <p class="text-slate-300 text-sm">Lahan parkir memadai dengan sistem keamanan terpadu. Kebebasan jam malam fleksibel khusus bagi Anda para profesional.</p>
                         </div>
@@ -450,9 +462,8 @@
                 <!-- Card 1: Mezzanine Bulanan -->
                 <a href="tipe-kamar/mezzanine-bulanan.html" class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 p-0">
                     <div class="relative w-full aspect-[9/16] max-h-[400px] overflow-hidden">
-                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
-                        <img loading="lazy" src="https://dongkrakusaha.com/gambarbebas/1142920260821-011235_penginapan-mezzanine-cirebon-arsa-tera-01.jpg" alt="Kamar Mezzanine Bulanan" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 w-full p-4 z-20 bg-gradient-to-t from-[#030712] to-transparent text-center">
+                        <img loading="lazy" src="desain-kamar-kos-mezzanine-cirebon.webp" alt="Kamar Mezzanine Bulanan" class="w-full h-full object-cover opacity-90 transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 w-full p-4 z-20 bg-gradient-to-t from-[#030712] via-[#030712]/80 to-transparent text-center">
                             <h4 class="text-white font-extrabold text-sm md:text-base group-hover:text-auraEmerald transition-colors">Mezzanine (Bulanan)</h4>
                             <span class="mt-1 text-[10px] font-bold text-auraEmerald uppercase tracking-widest flex items-center justify-center gap-1">Detail Kamar <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></span>
                         </div>
@@ -462,9 +473,8 @@
                 <!-- Card 2: Mezzanine Harian -->
                 <a href="tipe-kamar/mezzanine-harian.html" class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 p-0">
                     <div class="relative w-full aspect-[9/16] max-h-[400px] overflow-hidden">
-                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
-                        <img loading="lazy" src="https://dongkrakusaha.com/gambarbebas/1142920260821-015226_kost-eksklusif-cirebon-arsa-tera.jpg" alt="Kamar Mezzanine Harian" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 w-full p-4 z-20 bg-gradient-to-t from-[#030712] to-transparent text-center">
+                        <img loading="lazy" src="sewa-harian-guest-house-cirebon-arsa-tera.webp" alt="Kamar Mezzanine Harian" class="w-full h-full object-cover opacity-90 transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 w-full p-4 z-20 bg-gradient-to-t from-[#030712] via-[#030712]/80 to-transparent text-center">
                             <h4 class="text-white font-extrabold text-sm md:text-base group-hover:text-auraEmerald transition-colors">Mezzanine (Harian)</h4>
                             <span class="mt-1 text-[10px] font-bold text-auraEmerald uppercase tracking-widest flex items-center justify-center gap-1">Detail Kamar <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></span>
                         </div>
@@ -474,9 +484,9 @@
                 <!-- Card 3: Sewa Full Rumah -->
                 <a href="tipe-kamar/sewa-full-guest-house.html" class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 p-0">
                     <div class="relative w-full aspect-[9/16] max-h-[400px] overflow-hidden">
-                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
-                        <img loading="lazy" src="https://dongkrakusaha.com/gambarbebas/1142920260821-015226_kost-eksklusif-cirebon-arsa-tera-01.jpg" alt="Sewa 1 Rumah" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 w-full p-4 z-20 bg-gradient-to-t from-[#030712] to-transparent text-center">
+                        <!-- Menggunakan titik tengah agar wajah/bangunan terlihat -->
+                        <img loading="lazy" src="guest-house-pusat-kota-cirebon-arsa-tera.webp" alt="Sewa 1 Rumah" class="w-full h-full object-cover object-center opacity-90 transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 w-full p-4 z-20 bg-gradient-to-t from-[#030712] via-[#030712]/80 to-transparent text-center">
                             <h4 class="text-white font-extrabold text-sm md:text-base group-hover:text-auraEmerald transition-colors">Sewa Full Rumah</h4>
                             <span class="mt-1 text-[10px] font-bold text-auraEmerald uppercase tracking-widest flex items-center justify-center gap-1">Detail Fasilitas <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></span>
                         </div>
@@ -486,9 +496,8 @@
                  <!-- Card 4: Kamar Standar -->
                  <a href="tipe-kamar/kamar-standar.html" class="glass-card group flex flex-col relative overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all duration-500 hover:-translate-y-2 p-0">
                     <div class="relative w-full aspect-[9/16] max-h-[400px] overflow-hidden">
-                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors z-10 pointer-events-none"></div>
-                        <img loading="lazy" src="https://dongkrakusaha.com/gambarbebas/1142920260821-015226_kost-eksklusif-cirebon-arsa-tera-02.jpg" alt="Kamar Tipe Standar" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 w-full p-4 z-20 bg-gradient-to-t from-[#030712] to-transparent text-center">
+                        <img loading="lazy" src="kamar-standar-fasilitas-hotel-cirebon.webp" alt="Kamar Tipe Standar" class="w-full h-full object-cover opacity-90 transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 w-full p-4 z-20 bg-gradient-to-t from-[#030712] via-[#030712]/80 to-transparent text-center">
                             <h4 class="text-white font-extrabold text-sm md:text-base group-hover:text-auraEmerald transition-colors">Kamar Standar</h4>
                             <span class="mt-1 text-[10px] font-bold text-auraEmerald uppercase tracking-widest flex items-center justify-center gap-1">Detail Kamar <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></span>
                         </div>
@@ -512,18 +521,19 @@
                         <h3 class="text-auraEmerald font-bold text-xl mb-4">Staycation Estetik</h3>
                         <p class="text-slate-300 text-sm leading-relaxed mb-6">Nikmati liburan singkat atau kunjungan bisnis Anda di Cirebon dengan fasilitas <strong class="text-white font-semibold">penginapan estetik harian</strong> kami yang *instagramable* dan nyaman.</p>
                     </div>
-                    <a href="https://wa.me/6285111367588" target="_blank" class="text-xs text-auraEmerald font-bold uppercase tracking-wider group-hover:text-white transition-colors">Booking Harian →</a>
+                    <a href="tipe-kamar/mezzanine-harian.html" class="text-xs text-auraEmerald font-bold uppercase tracking-wider group-hover:text-white transition-colors">Booking Harian →</a>
                 </div>
                 <div class="glass-card p-8 flex flex-col justify-between group">
                     <div>
                         <h3 class="text-auraEmerald font-bold text-xl mb-4">Kos Bulanan Eksklusif</h3>
                         <p class="text-slate-300 text-sm leading-relaxed mb-6">Pilihan ideal bagi profesional. <strong class="text-white font-semibold">Kos eksklusif Kesambi Cirebon</strong> kami menawarkan ketenangan dan privasi setara hotel dengan harga kos-kosan elit.</p>
                     </div>
-                    <a href="https://wa.me/6285111367588" target="_blank" class="text-xs text-auraEmerald font-bold uppercase tracking-wider group-hover:text-white transition-colors">Info Kos Bulanan →</a>
+                    <a href="tipe-kamar/mezzanine-bulanan.html" class="text-xs text-auraEmerald font-bold uppercase tracking-wider group-hover:text-white transition-colors">Info Kos Bulanan →</a>
                 </div>
+                <!-- Gambar Mezzanine -->
                 <a href="#galeri-proyek" class="glass-card p-0 relative overflow-hidden flex flex-col justify-end min-h-[300px] group md:col-span-2 lg:col-span-1 border-white/10 hover:border-auraEmerald/40">
-                    <img loading="lazy" src="https://dongkrakusaha.com/gambarbebas/1142920260821-011235_penginapan-mezzanine-cirebon-arsa-tera-01.jpg" alt="Kamar Mezzanine" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+                    <img loading="lazy" src="desain-kamar-kos-mezzanine-cirebon.webp" alt="Kamar Mezzanine" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/60 to-transparent"></div>
                     <div class="relative z-10 p-8">
                         <h3 class="text-auraEmerald font-bold text-xl mb-3">Spesialis Kamar Mezzanine</h3>
                         <p class="text-slate-300 text-sm leading-relaxed"><strong class="text-white font-semibold">Penginapan tipe mezzanine Kota Cirebon</strong> pertama yang menawarkan desain *layout* cerdas dan elegan.</p>
@@ -562,8 +572,8 @@
                 <!-- Artikel 1 -->
                 <a href="edukasi/tips-menata-mezzanine.html" class="glass-card p-2 overflow-hidden group block border-white/5 hover:border-auraEmerald/30">
                     <div class="aspect-[9/16] max-h-[250px] overflow-hidden rounded-2xl relative">
-                        <img loading="lazy" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=400" alt="Tips Menata Kamar Mezzanine" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-4 flex flex-col justify-end">
+                        <img loading="lazy" src="desain-kamar-kos-mezzanine-cirebon.webp" alt="Tips Menata Kamar Mezzanine" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/60 to-transparent p-4 flex flex-col justify-end">
                             <span class="text-[9px] text-auraEmerald font-bold mb-1 block uppercase tracking-widest">Dekorasi</span>
                             <h4 class="text-white font-bold text-sm leading-snug line-clamp-2">Tips Cerdas Menata Kamar Mezzanine</h4>
                         </div>
@@ -573,8 +583,8 @@
                 <!-- Artikel 2 -->
                 <a href="edukasi/kuliner-malam-cipto.html" class="glass-card p-2 overflow-hidden group block border-white/5 hover:border-auraEmerald/30">
                     <div class="aspect-[9/16] max-h-[250px] overflow-hidden rounded-2xl relative">
-                        <img loading="lazy" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=400" alt="Kuliner Cirebon" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-4 flex flex-col justify-end">
+                        <img loading="lazy" src="dapur-bersama-kos-eksklusif-cirebon.webp" alt="Kuliner Cirebon" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/60 to-transparent p-4 flex flex-col justify-end">
                             <span class="text-[9px] text-auraEmerald font-bold mb-1 block uppercase tracking-widest">Kuliner Lokal</span>
                             <h4 class="text-white font-bold text-sm leading-snug line-clamp-2">Rekomendasi Kuliner Dekat Jalan Cipto</h4>
                         </div>
@@ -584,8 +594,8 @@
                 <!-- Artikel 3 -->
                 <a href="edukasi/konsep-coliving-nyaman.html" class="glass-card p-2 overflow-hidden group block border-white/5 hover:border-auraEmerald/30">
                     <div class="aspect-[9/16] max-h-[250px] overflow-hidden rounded-2xl relative">
-                        <img loading="lazy" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=400" alt="Etika Co-Living" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-4 flex flex-col justify-end">
+                        <img loading="lazy" src="pintu-masuk-kos-eksklusif-kesambi-cirebon.webp" alt="Etika Co-Living" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/60 to-transparent p-4 flex flex-col justify-end">
                             <span class="text-[9px] text-auraEmerald font-bold mb-1 block uppercase tracking-widest">Gaya Hidup</span>
                             <h4 class="text-white font-bold text-sm leading-snug line-clamp-2">Memahami Konsep Nyaman Co-Living</h4>
                         </div>
@@ -595,8 +605,8 @@
                 <!-- Artikel 4 -->
                 <a href="edukasi/wfh-fokus-kamar-kos.html" class="glass-card p-2 overflow-hidden group block border-white/5 hover:border-auraEmerald/30">
                     <div class="aspect-[9/16] max-h-[250px] overflow-hidden rounded-2xl relative">
-                        <img loading="lazy" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=400" alt="Kerja Kos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent p-4 flex flex-col justify-end">
+                        <img loading="lazy" src="kamar-standar-fasilitas-hotel-cirebon.webp" alt="Kerja Kos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/60 to-transparent p-4 flex flex-col justify-end">
                             <span class="text-[9px] text-auraEmerald font-bold mb-1 block uppercase tracking-widest">Produktivitas</span>
                             <h4 class="text-white font-bold text-sm leading-snug line-clamp-2">Cara Tetap Fokus WFH dari Kamar Kos</h4>
                         </div>
@@ -617,7 +627,7 @@
             <div class="flex overflow-x-auto pb-8 snap-x snap-mandatory gap-4 sm:gap-6 md:grid md:grid-cols-3 lg:grid-cols-4 justify-start md:justify-items-center scrollbar-hide">
 
               <!-- VIDEO 1: Reviewer Pintu Masuk (Anggita) -->
-              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/anggitawd/reel/DcOK8itKewf/embed">
+              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/reel/DcOK8itKewf/embed/">
                 <img src="pintu-masuk-kos-eksklusif-kesambi-cirebon.webp" alt="Reviewer di Pintu Masuk Kos Eksklusif Cirebon" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110" loading="lazy">
                 <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all">
                   <div class="bg-auraEmerald rounded-full p-4 shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover:scale-110 transition-transform">
@@ -627,7 +637,7 @@
               </div>
 
               <!-- VIDEO 2: Room Tour Mezzanine -->
-              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/arsatera.id/reel/DcDDSpqz4FY/embed">
+              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/reel/DcDDSpqz4FY/embed/">
                 <img src="desain-kamar-kos-mezzanine-cirebon.webp" alt="Desain Kamar Kos Mezzanine Cirebon" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110" loading="lazy">
                 <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all">
                   <div class="bg-auraEmerald rounded-full p-4 shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover:scale-110 transition-transform">
@@ -637,7 +647,7 @@
               </div>
 
               <!-- VIDEO 3: Pria Bawa Koper (Staycation) -->
-              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/arsatera.id/reel/DcBCNb4P5aP/embed">
+              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/reel/DcBCNb4P5aP/embed/">
                 <img src="sewa-harian-guest-house-cirebon-arsa-tera.webp" alt="Pria Bawa Koper Sewa Harian Guest House Cirebon" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110" loading="lazy">
                 <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all">
                   <div class="bg-auraEmerald rounded-full p-4 shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover:scale-110 transition-transform">
@@ -647,7 +657,7 @@
               </div>
 
               <!-- VIDEO 4: Open Kitchen Bersama -->
-              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/arsatera.id/reel/Db19WdLvTsN/embed">
+              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/reel/Db19WdLvTsN/embed/">
                 <img src="dapur-bersama-kos-eksklusif-cirebon.webp" alt="Dapur Bersama Kos Eksklusif Cirebon" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110" loading="lazy">
                 <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all">
                   <div class="bg-auraEmerald rounded-full p-4 shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover:scale-110 transition-transform">
@@ -657,7 +667,7 @@
               </div>
 
               <!-- VIDEO 5: Kamar Standar / Deluxe 1 -->
-              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/arsatera.id/reel/DbsjpxZD36w/embed">
+              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/reel/DbsjpxZD36w/embed/">
                 <img src="kamar-standar-fasilitas-hotel-cirebon.webp" alt="Kamar Standar Fasilitas Hotel Cirebon" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110" loading="lazy">
                 <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all">
                   <div class="bg-auraEmerald rounded-full p-4 shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover:scale-110 transition-transform">
@@ -666,8 +676,18 @@
                 </div>
               </div>
 
-              <!-- VIDEO 6: Resepsionis / Reviewer -->
-              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/kospinciptadana/reel/DbN9hMxzszm/embed">
+              <!-- VIDEO 6: Kamar Standar / Deluxe 2 -->
+              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/reel/Dbsjmk-j4lR/embed/">
+                <img src="guest-house-pusat-kota-cirebon-arsa-tera.webp" alt="Fasilitas Kamar Standar Cirebon" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110" loading="lazy">
+                <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all">
+                  <div class="bg-auraEmerald rounded-full p-4 shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover:scale-110 transition-transform">
+                    <svg class="w-8 h-8 text-obsidian ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M8 5v14l11-7z"/></svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- VIDEO 7: Resepsionis / Reviewer -->
+              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/reel/DbN9hMxzszm/embed/">
                 <img src="resepsionis-ramah-arsa-tera-cirebon.webp" alt="Resepsionis Ramah Arsa Tera Cirebon" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110" loading="lazy">
                 <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all">
                   <div class="bg-auraEmerald rounded-full p-4 shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover:scale-110 transition-transform">
@@ -827,7 +847,7 @@
                     </a>
                     <p class="leading-relaxed text-sm mb-6 text-slate-400 max-w-md">Menghadirkan standar baru penginapan harian dan kos eksklusif bulanan di Cirebon. Nikmati kenyamanan desain apartemen studio dan fasilitas lengkap setara hotel bintang di pusat kota.</p>
                     <div class="flex gap-4">
-                        <a href="https://www.instagram.com/arsatera.id?igsh=" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-auraEmerald hover:text-obsidian transition-colors text-white">IG</a>
+                        <a href="https://www.instagram.com/arsatera.id" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-auraEmerald hover:text-obsidian transition-colors text-white">IG</a>
                     </div>
                 </div>
                 
@@ -1024,26 +1044,25 @@
                 chatInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') processAI(); });
             }
 
-            // 5. SCRIPT PENGGERAK VIDEO FACADE (IG REELS)
+            // 5. SCRIPT PENGGERAK VIDEO FACADE (IG REELS) FIX
             const facades = document.querySelectorAll('.video-facade');
             facades.forEach(facade => {
                 facade.addEventListener('click', function() {
                     const videoSrc = this.getAttribute('data-video');
-                    this.innerHTML = `<iframe src="${videoSrc}" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" class="w-full h-full object-cover rounded-[2rem]"></iframe>`;
+                    this.innerHTML = `<iframe src="${videoSrc}" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media" class="w-full h-full object-cover rounded-[2rem]"></iframe>`;
                     this.classList.remove('cursor-pointer', 'group');
                 });
             });
         });
         
-        // 6. SCRIPT LAZY LOAD HERO IG VIDEO
+        // 6. SCRIPT LAZY LOAD HERO IG VIDEO FIX (Anggita)
         function loadIGVideo() {
             const placeholder = document.getElementById('ig-placeholder');
             const container = document.getElementById('ig-iframe-container');
             if(placeholder && container) {
                 placeholder.style.opacity = '0';
                 setTimeout(() => { placeholder.style.display = 'none'; }, 500);
-                // Injeksi Iframe IG Video 1 (Reviewer Anggita) ke Hero Section
-                container.innerHTML = `<iframe src="https://www.instagram.com/anggitawd/reel/DcOK8itKewf/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" class="w-full h-full rounded-[2rem]"></iframe>`;
+                container.innerHTML = `<iframe src="https://www.instagram.com/reel/DcOK8itKewf/embed/" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media" class="w-full h-full rounded-[2rem]"></iframe>`;
             }
         }
     </script>
