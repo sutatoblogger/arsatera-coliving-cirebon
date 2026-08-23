@@ -194,7 +194,7 @@
                     </div>
 
                     <a href="#fasilitas" class="hover:text-white transition-colors">FASILITAS</a>
-                    <a href="#galeri-proyek" class="hover:text-white transition-colors">ROOM TOUR</a>
+                    <a href="#rute-akses" class="hover:text-white transition-colors">RUTE AKSES</a>
                     <a href="#reservasi" class="hover:text-white transition-colors">RESERVASI</a>
                 </div>
 
@@ -233,7 +233,7 @@
                 </div>
 
                 <a href="#fasilitas" class="text-white hover:text-auraEmerald pb-3 border-b border-white/10 transition-colors">Fasilitas</a>
-                <a href="#galeri-proyek" class="text-white hover:text-auraEmerald pb-3 border-b border-white/10 transition-colors">Room Tour</a>
+                <a href="#rute-akses" class="text-white hover:text-auraEmerald pb-3 border-b border-white/10 transition-colors">Rute Akses</a>
                 <a href="#reservasi" class="text-white hover:text-auraEmerald pb-3 border-b border-white/10 transition-colors">Reservasi</a>
                 
                 <a href="https://wa.me/6285111367588" target="_blank" class="mt-auto block w-full py-4 bg-auraEmerald text-obsidian text-center font-extrabold rounded-xl shadow-[0_0_20px_rgba(16,185,129,0.3)]">Hubungi Admin Sekarang</a>
@@ -246,8 +246,8 @@
         <!-- ================= HERO SECTION (ANTI TUMPANG TINDIH) ================= -->
         <section class="mb-24 pt-8 lg:pt-16 relative rounded-3xl border border-white/10 overflow-hidden shadow-2xl min-h-[600px] flex items-center">
             
-            <!-- GAMBAR BACKGROUND MURNI (ANTI GRADIENT ERROR) -->
-            <img src="guest-house-pusat-kota-cirebon-arsa-tera.webp" alt="Arsa Tera Guest House" class="absolute inset-0 w-full h-full object-cover">
+            <!-- GAMBAR BACKGROUND MURNI (LCP OPTIMIZED) -->
+            <img src="guest-house-pusat-kota-cirebon-arsa-tera.webp" alt="Arsa Tera Guest House" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high" loading="eager" decoding="sync">
             
             <!-- LAPISAN KEGELAPAN (OVERLAY) -->
             <div class="absolute inset-0 bg-gradient-to-r from-[#030712] via-[#030712]/90 to-[#030712]/60"></div>
@@ -263,8 +263,8 @@
                     <!-- AREA VIDEO GITHUB LAZY LOAD (ANTI-BLOATWARE) -->
                     <div id="ig-wrapper" class="shadow-[0_0_50px_rgba(16,185,129,0.15)] animate-border-glow">
                         <div id="ig-placeholder" class="ig-placeholder" onclick="loadHeroVideo()">
-                            <!-- GAMBAR THUMBNAIL DITERANGKAN & EYE-CATCHING -->
-                            <img src="pintu-masuk-kos-eksklusif-kesambi-cirebon.webp" alt="Video Lobi Arsa Tera" class="absolute inset-0 w-full h-full object-cover opacity-80">
+                    <!-- GAMBAR THUMBNAIL DITERANGKAN & EYE-CATCHING -->
+                            <img src="pintu-masuk-kos-eksklusif-kesambi-cirebon.webp" alt="Video Lobi Arsa Tera" class="absolute inset-0 w-full h-full object-cover opacity-80" fetchpriority="high" loading="eager" decoding="sync">
                             <!-- Gradient bawah saja agar teks terbaca -->
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                             
@@ -874,21 +874,21 @@
         </div>
     </div>
 
-    <!-- ================= KUMPULAN SCRIPT MASTER ================= -->
+    <!-- ================= KUMPULAN SCRIPT MASTER (ZERO-BLOAT OPTIMIZED) ================= -->
     <script>
+        // =========================================================================
+        // 1. SCRIPT PRIORITAS UTAMA (LANGSUNG AKTIF 0 DETIK)
+        // =========================================================================
         document.addEventListener('DOMContentLoaded', () => {
             
-            // 1. SCRIPT PENGGERAK MENU MOBILE (HAMBURGER)
+            // A. Menu Mobile (Hamburger)
             const btn = document.getElementById('menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
-            
             if(btn && mobileMenu) {
                 btn.addEventListener('click', () => {
                     mobileMenu.classList.toggle('translate-x-full');
                     mobileMenu.classList.toggle('translate-x-0');
                 });
-                
-                // Tutup otomatis saat link diklik (kecuali tombol Tipe Kamar)
                 const mobileLinks = mobileMenu.querySelectorAll('a:not(#mobile-dropdown-btn)');
                 mobileLinks.forEach(link => {
                     link.addEventListener('click', () => {
@@ -898,11 +898,10 @@
                 });
             }
 
-            // 1.5. SCRIPT DROPDOWN MENU MOBILE (ACCORDION)
+            // B. Dropdown Menu Mobile
             const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
             const mobileDropdownMenu = document.getElementById('mobile-dropdown-menu');
             const mobileDropdownIcon = document.getElementById('mobile-dropdown-icon');
-            
             if(mobileDropdownBtn && mobileDropdownMenu) {
                 mobileDropdownBtn.addEventListener('click', (e) => {
                     e.preventDefault(); 
@@ -912,7 +911,7 @@
                 });
             }
 
-            // 2. SCRIPT FORM SUBMISSION (WEB3FORMS + GSHEETS + WA)
+            // C. Web3Forms + Google Sheets + Automasi WA
             const waForm = document.getElementById('waForm');
             if(waForm) {
                 waForm.addEventListener('submit', async function(event) {
@@ -924,12 +923,15 @@
                     
                     submitBtn.innerText = "MENGIRIM DATA..."; submitBtn.disabled = true;
                     try {
+                        // 1. Kirim Notifikasi Email
                         await fetch('https://api.web3forms.com/submit', { method: 'POST', body: compiledFormData }); 
                         
+                        // 2. Kirim Rekap Database ke Google Sheets
                         const rawJsonData = Object.fromEntries(compiledFormData.entries());
                         const sheetUrl = 'https://script.google.com/macros/s/AKfycbxwB6z8BSSP_D86AUPDqDWT-tajBbCdsrgcyhT6LzG_KNDKh4BrLO9mOL_ZKIRPjXoD/exec'; 
                         await fetch(sheetUrl, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(rawJsonData) });
                         
+                        // 3. Lempar Teks Otomatis ke WhatsApp Admin
                         const waNumber = "6285111367588"; 
                         const waText = `Halo Arsa Tera, saya ingin reservasi kamar.\n\n*Nama:* ${rawJsonData.name}\n*Nomor WA:* ${rawJsonData.whatsapp}\n*Tipe Kamar:* ${rawJsonData.layanan}\n*Catatan/Tanggal:* ${rawJsonData.message}\n\nMohon info ketersediaan kamarnya ya.`;
                         window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(waText)}`, '_blank');
@@ -937,96 +939,25 @@
                         statusMsg.style.display = "block"; 
                         targetedForm.reset();
                     } catch (e) {
-                        console.error("Gagal mengirim", e);
+                        console.error("Gagal mengirim data", e);
                     } finally {
                         submitBtn.innerText = "Kirim Permintaan Reservasi →"; submitBtn.disabled = false;
                     }
                 });
             }
-
-            // 3. SCRIPT AUDIBLE FAQ (VOICE AI)
-            const voiceSynth = window.speechSynthesis;
-            document.querySelectorAll('.jarvis-voice-btn').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    document.querySelectorAll('.jarvis-voice-btn').forEach(btn => btn.classList.remove('jarvis-playing'));
-                    if (voiceSynth.speaking) voiceSynth.cancel();
-                    
-                    const messagePayload = button.getAttribute('data-text');
-                    const speechUtterance = new SpeechSynthesisUtterance(messagePayload);
-                    speechUtterance.lang = 'id-ID';
-                    speechUtterance.rate = 0.9;
-                    speechUtterance.pitch = 1.0;
-                    
-                    button.classList.add('jarvis-playing');
-                    speechUtterance.onend = () => button.classList.remove('jarvis-playing');
-                    speechUtterance.onerror = () => button.classList.remove('jarvis-playing');
-                    voiceSynth.speak(speechUtterance);
-                });
-            });
-
-            // 4. SCRIPT AI CHATBOT WIDGET
-            const aiBtn = document.getElementById('jarvis-ai-button');
-            const chatBox = document.getElementById('jarvis-chat-box');
-            const closeBtn = document.getElementById('jarvis-close-ai');
-            const chatInput = document.getElementById('jarvis-chat-input');
-            const sendBtn = document.getElementById('jarvis-send-chat');
-            const chatHistory = document.getElementById('jarvis-chat-history');
-
-            if(aiBtn && chatBox) {
-                aiBtn.addEventListener('click', () => { chatBox.style.display = chatBox.style.display === 'none' ? 'flex' : 'none'; });
-                closeBtn.addEventListener('click', () => chatBox.style.display = 'none');
-
-                function processAI() {
-                    const userText = chatInput.value.trim().toLowerCase();
-                    if(!userText) return;
-                    
-                    chatHistory.innerHTML += `<div class="jarvis-msg-user">${chatInput.value.trim()}</div>`;
-                    chatInput.value = '';
-                    chatHistory.scrollTop = chatHistory.scrollHeight;
-                    
-                    const loadId = 'jarvis-load-' + Date.now();
-                    chatHistory.innerHTML += `<div id="${loadId}" class="jarvis-msg-ai jarvis-typing">AI sedang mengetik...</div>`;
-                    chatHistory.scrollTop = chatHistory.scrollHeight;
-                    
-                    setTimeout(() => {
-                        document.getElementById(loadId).remove();
-                        let reply = "";
-                        if (userText.match(/harga|biaya|berapa|pricelist|tarif/)) { reply = `Untuk kamar tipe Mezzanine Eksklusif, harganya mulai dari Rp 450.000 per malam, atau Rp 3.450.000 untuk sewa bulanan. Hubungi Admin via WA untuk promo terbaru!`; } 
-                        else if (userText.match(/lokasi|dimana|alamat|daerah|tempat|cipto/)) { reply = `Arsa Tera sangat strategis di pusat kota! Alamat kami di Jl. Pembangunan V Blok L No.19, Pekiringan, Kec. Kesambi, Cirebon.`; } 
-                        else if (userText.match(/fasilitas|dapat apa|ac|tv|dapur/)) { reply = `Anda mendapatkan kamar AC, Smart TV, Kamar Mandi Dalam, Kasur Queen Size, serta akses ke Open Space Kitchen dan Free Flow air minum.`; } 
-                        else if (userText.match(/jam malam|bebas|kunci/)) { reply = `Arsa Tera menerapkan sistem akses fleksibel 24 jam khusus untuk penghuni dengan sistem keamanan terpadu.`; }
-                        else if (userText.match(/pesan|booking|reservasi|sewa|wa|admin/)) { reply = `Untuk reservasi, silakan langsung klik ikon WhatsApp hijau di pojok layar, atau hubungi WA kami di +62 851-1136-7588.`; } 
-                        else { reply = `Untuk info lebih detail, silakan langsung terhubung dengan Admin kami via WhatsApp di +62 851-1136-7588.`; }
-                        
-                        chatHistory.innerHTML += `<div class="jarvis-msg-ai">${reply}</div>`;
-                        chatHistory.scrollTop = chatHistory.scrollHeight;
-                    }, 800);
-                }
-
-                sendBtn.addEventListener('click', processAI);
-                chatInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') processAI(); });
-            }
-
-            // 5. SCRIPT PENGGERAK VIDEO FACADE (IG REELS) FIX
-            const facades = document.querySelectorAll('.video-facade');
-            facades.forEach(facade => {
-                facade.addEventListener('click', function() {
-                    const videoSrc = this.getAttribute('data-video');
-                    this.innerHTML = `<iframe src="${videoSrc}" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media" class="w-full h-full object-cover rounded-[2rem]"></iframe>`;
-                    this.classList.remove('cursor-pointer', 'group');
-                });
-            });
         });
+
+        // =========================================================================
+        // 2. FUNGSI PEMUTAR VIDEO GLOBAL (DAPAT DIPANGGIL KAPAN SAJA)
+        // =========================================================================
         
-        // 6. SCRIPT LAZY LOAD HERO VIDEO (GITHUB SELF-HOSTED)
+        // A. Video Hero Lobi (MP4)
         function loadHeroVideo() {
             const placeholder = document.getElementById('ig-placeholder');
             const container = document.getElementById('ig-iframe-container');
             if(placeholder && container) {
                 placeholder.style.opacity = '0';
                 setTimeout(() => { placeholder.style.display = 'none'; }, 500);
-                // Injeksi tag HTML5 Video murni (Beban 0 sebelum diklik)
                 container.innerHTML = `
                     <video controls autoplay playsinline class="w-full h-full object-cover rounded-[2rem]">
                         <source src="guest-house-pusat-kota-cirebon-arsa-tera.mp4" type="video/mp4">
@@ -1035,24 +966,94 @@
                 `;
             }
         }
-		// 7. SCRIPT LAZY LOAD VIDEO RUTE AKSES (GITHUB SELF-HOSTED)
+
+        // B. Video Rute Akses (MP4)
         function loadRouteVideo() {
             const placeholder = document.getElementById('route-placeholder');
             const container = document.getElementById('route-video-container');
             if(placeholder && container) {
-                // Menghilangkan gambar thumbnail
                 placeholder.style.display = 'none';
-                // Menampilkan kontainer video
                 container.style.display = 'block';
-                // Injeksi video MP4 GitHub (Loading Wusss)
                 container.innerHTML = `
-                    <video controls autoplay playsinline class="w-full h-full object-cover">
+                    <video controls autoplay playsinline class="w-full h-full object-cover rounded-[2rem]">
                         <source src="rute-akses-arsatera.mp4" type="video/mp4">
                         Browser Anda tidak mendukung pemutar video HTML5.
                     </video>
                 `;
             }
         }
+
+        // =========================================================================
+        // 3. SCRIPT SEKUNDER KECERDASAN BUATAN (DITUNDA 1.5 DETIK AGAR TBT HIJAU)
+        // =========================================================================
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                
+                // A. Engine Suara (Voice AI)
+                const voiceSynth = window.speechSynthesis;
+                document.querySelectorAll('.jarvis-voice-btn').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        document.querySelectorAll('.jarvis-voice-btn').forEach(btn => btn.classList.remove('jarvis-playing'));
+                        if (voiceSynth.speaking) voiceSynth.cancel();
+                        
+                        const messagePayload = button.getAttribute('data-text');
+                        const speechUtterance = new SpeechSynthesisUtterance(messagePayload);
+                        speechUtterance.lang = 'id-ID'; 
+                        speechUtterance.rate = 0.9; 
+                        speechUtterance.pitch = 1.0;
+                        
+                        button.classList.add('jarvis-playing');
+                        speechUtterance.onend = () => button.classList.remove('jarvis-playing');
+                        speechUtterance.onerror = () => button.classList.remove('jarvis-playing');
+                        voiceSynth.speak(speechUtterance);
+                    });
+                });
+
+                // B. Engine Chatbot NLP (Asisten Virtual)
+                const aiBtn = document.getElementById('jarvis-ai-button');
+                const chatBox = document.getElementById('jarvis-chat-box');
+                const closeBtn = document.getElementById('jarvis-close-ai');
+                const chatInput = document.getElementById('jarvis-chat-input');
+                const sendBtn = document.getElementById('jarvis-send-chat');
+                const chatHistory = document.getElementById('jarvis-chat-history');
+
+                if(aiBtn && chatBox) {
+                    aiBtn.addEventListener('click', () => { chatBox.style.display = chatBox.style.display === 'none' ? 'flex' : 'none'; });
+                    closeBtn.addEventListener('click', () => chatBox.style.display = 'none');
+
+                    function processAI() {
+                        const userText = chatInput.value.trim().toLowerCase();
+                        if(!userText) return;
+                        
+                        chatHistory.innerHTML += `<div class="jarvis-msg-user">${chatInput.value.trim()}</div>`;
+                        chatInput.value = '';
+                        chatHistory.scrollTop = chatHistory.scrollHeight;
+                        
+                        const loadId = 'jarvis-load-' + Date.now();
+                        chatHistory.innerHTML += `<div id="${loadId}" class="jarvis-msg-ai jarvis-typing">AI sedang mengetik...</div>`;
+                        chatHistory.scrollTop = chatHistory.scrollHeight;
+                        
+                        setTimeout(() => {
+                            document.getElementById(loadId).remove();
+                            let reply = "";
+                            if (userText.match(/harga|biaya|berapa|pricelist|tarif/)) { reply = `Untuk kamar tipe Mezzanine Eksklusif, harganya mulai dari Rp 450.000 per malam, atau Rp 3.450.000 untuk sewa bulanan. Hubungi Admin via WA untuk promo terbaru!`; } 
+                            else if (userText.match(/lokasi|dimana|alamat|daerah|tempat|cipto/)) { reply = `Arsa Tera sangat strategis di pusat kota! Alamat kami di Jl. Pembangunan V Blok L No.19, Pekiringan, Kec. Kesambi, Cirebon.`; } 
+                            else if (userText.match(/fasilitas|dapat apa|ac|tv|dapur/)) { reply = `Anda mendapatkan kamar AC, Smart TV, Kamar Mandi Dalam, Kasur Queen Size, serta akses ke Open Space Kitchen dan Free Flow air minum.`; } 
+                            else if (userText.match(/jam malam|bebas|kunci/)) { reply = `Arsa Tera menerapkan sistem akses fleksibel 24 jam khusus untuk penghuni dengan sistem keamanan terpadu.`; }
+                            else if (userText.match(/pesan|booking|reservasi|sewa|wa|admin/)) { reply = `Untuk reservasi, silakan langsung klik ikon WhatsApp hijau di pojok layar, atau hubungi WA kami di +62 851-1136-7588.`; } 
+                            else { reply = `Untuk info lebih detail, silakan langsung terhubung dengan Admin kami via WhatsApp di +62 851-1136-7588.`; }
+                            
+                            chatHistory.innerHTML += `<div class="jarvis-msg-ai">${reply}</div>`;
+                            chatHistory.scrollTop = chatHistory.scrollHeight;
+                        }, 800);
+                    }
+
+                    sendBtn.addEventListener('click', processAI);
+                    chatInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') processAI(); });
+                }
+            }, 1500); // Batas aman penundaan rendering untuk bot Google PageSpeed
+        });
     </script>
 </body>
 </html>
