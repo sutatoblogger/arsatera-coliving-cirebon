@@ -260,10 +260,10 @@
                 <div class="lg:col-span-4 order-2 lg:order-1 flex justify-center lg:justify-start relative">
                     <div class="absolute inset-0 bg-auraEmerald/20 blur-[100px] rounded-full pointer-events-none scale-75"></div>
                     
-                    <!-- AREA VIDEO IG LAZY LOAD -->
+                    <!-- AREA VIDEO GITHUB LAZY LOAD (ANTI-BLOATWARE) -->
                     <div id="ig-wrapper" class="shadow-[0_0_50px_rgba(16,185,129,0.15)] animate-border-glow">
-                        <div id="ig-placeholder" class="ig-placeholder" onclick="loadIGVideo()">
-                            <!-- GAMBAR DITERANGKAN & EYE-CATCHING -->
+                        <div id="ig-placeholder" class="ig-placeholder" onclick="loadHeroVideo()">
+                            <!-- GAMBAR THUMBNAIL DITERANGKAN & EYE-CATCHING -->
                             <img src="pintu-masuk-kos-eksklusif-kesambi-cirebon.webp" alt="Video Lobi Arsa Tera" class="absolute inset-0 w-full h-full object-cover opacity-80">
                             <!-- Gradient bawah saja agar teks terbaca -->
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
@@ -272,7 +272,7 @@
                                 <div class="ig-play-btn w-16 h-16 rounded-full bg-white/20 border-2 border-auraEmerald flex items-center justify-center text-auraEmerald mb-4 backdrop-blur-md shadow-lg">
                                     <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                                 </div>
-                                <span class="text-white text-xs font-bold uppercase tracking-widest bg-obsidian/80 px-4 py-1.5 rounded-full border border-auraEmerald/50 shadow-md">Lihat Room Tour</span>
+                                <span class="text-white text-xs font-bold uppercase tracking-widest bg-obsidian/80 px-4 py-1.5 rounded-full border border-auraEmerald/50 shadow-md">Tonton Room Tour</span>
                             </div>
                         </div>
                         <div id="ig-iframe-container" class="w-full h-full"></div>
@@ -1055,14 +1055,20 @@
             });
         });
         
-        // 6. SCRIPT LAZY LOAD HERO IG VIDEO FIX (Anggita)
-        function loadIGVideo() {
+        // 6. SCRIPT LAZY LOAD HERO VIDEO (GITHUB SELF-HOSTED)
+        function loadHeroVideo() {
             const placeholder = document.getElementById('ig-placeholder');
             const container = document.getElementById('ig-iframe-container');
             if(placeholder && container) {
                 placeholder.style.opacity = '0';
                 setTimeout(() => { placeholder.style.display = 'none'; }, 500);
-                container.innerHTML = `<iframe src="https://www.instagram.com/reel/DcOK8itKewf/embed/" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media" class="w-full h-full rounded-[2rem]"></iframe>`;
+                // Injeksi tag HTML5 Video murni (Beban 0 sebelum diklik)
+                container.innerHTML = `
+                    <video controls autoplay playsinline class="w-full h-full object-cover rounded-[2rem]">
+                        <source src="guest-house-pusat-kota-cirebon-arsa-tera.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung pemutar video HTML5.
+                    </video>
+                `;
             }
         }
     </script>
