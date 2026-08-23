@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Arsa Tera Guest House & Co-Living | Kos Eksklusif Cirebon</title>
-    <!-- Preload Gambar Hero Utama -->
-    <link rel="preload" as="image" href="guest-house-pusat-kota-cirebon-arsa-tera.webp" fetchpriority="high">
-    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    
     <meta name="description" content="Arsa Tera Guest House tawarkan kamar tingkat Instagramable, Smart TV, Open Kitchen & promo khusus di Kesambi Cirebon. Booking sebelum penuh!">
     <meta name="keywords" content="kost eksklusif cirebon, penginapan mezzanine cirebon, guest house unik cirebon, kos bulanan kesambi cirebon">
     <meta name="author" content="Arsa Tera">
     <meta name="robots" content="index, follow">
-    
     <link rel="canonical" href="https://arsatera-coliving-cirebon.vercel.app/">
 
-    <!-- JSON-LD GOD-TIER (LocalBusiness, WebSite, & FAQPage Schema) -->
+    <!-- 1. TRIK BYPASS: PRELOAD & PRECONNECT (MENCURI START) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preload" as="image" href="guest-house-pusat-kota-cirebon-arsa-tera.webp" fetchpriority="high">
+
+    <!-- 2. TRIK ASYNC FONT (MENGHILANGKAN BLANK PUTIH 1 DETIK) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&display=swap"></noscript>
+
+    <!-- 3. JSON-LD GOD-TIER (TETAP AMAN) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -96,9 +102,8 @@
     }
     </script>
     
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&display=swap" rel="stylesheet">
+    <!-- 4. TAILWIND CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <script>
         tailwind.config = {
             theme: {
@@ -116,44 +121,33 @@
             }
         }
     </script>
-    
+
+    <!-- 5. CUSTOM CSS (TETAP AMAN) -->
     <style>
-        /* BACKGROUND BODY MUTLAK BERSIH DARI GAMBAR */
-        body { 
-            background-color: #030712; 
-            background-image: radial-gradient(circle at 15% 0%, rgba(16, 185, 129, 0.15) 0%, transparent 40%), radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
-            background-attachment: fixed;
-        }
+        body { background-color: #030712; background-image: radial-gradient(circle at 15% 0%, rgba(16, 185, 129, 0.15) 0%, transparent 40%), radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.1) 0%, transparent 50%); background-attachment: fixed; }
         .glass-card { background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); border-radius: 1.5rem; transition: all 0.4s; }
         .glass-nav { background: rgba(3, 7, 18, 0.65); border-bottom: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(24px); }
-        
         #ig-wrapper { position: relative; width: 100%; max-width: 350px; aspect-ratio: 9/16; margin: 0 auto; border-radius: 2rem; overflow: hidden; }
         .ig-placeholder { position: absolute; inset: 0; background: #0a0f1c; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10; cursor: pointer; transition: opacity 0.5s ease; border: 1px solid rgba(255,255,255,0.1); }
         .ig-placeholder:hover .ig-play-btn { transform: scale(1.1); background: #10b981; color: #030712; }
         .ig-play-btn { transition: all 0.3s ease; }
-
         .dropdown-group:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
         .dropdown-menu { opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; pointer-events: none; }
-        
         @media (max-width: 768px) { body { padding-bottom: 120px !important; } }
         .jarvis-agency-link { color: #334155; text-decoration: none; transition: all 0.3s ease; }
         .jarvis-agency-link:hover { color: #10b981; font-weight: bold; }
         @keyframes jarvis-pulse { 0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); } 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); } }
-        
         .jarvis-trap-container { position: fixed; bottom: 25px; right: 25px; z-index: 9999; display: flex; gap: 15px; align-items: center; }
         .jarvis-cta-wa { width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); transition: transform 0.3s ease; text-decoration: none; }
         .jarvis-cta-wa:hover { transform: scale(1.1); }
         .jarvis-cta-wa svg { fill: #fff; width: 35px; height: 35px; }
-
         .jarvis-cta-ai { width: 60px; height: 60px; background: #ffffff; border: 2px solid #10b981; border-radius: 50%; cursor: pointer; animation: jarvis-pulse 2s infinite; display: flex; justify-content: center; align-items: center; box-shadow: 0 5px 15px rgba(0,0,0,0.5); transition: transform 0.3s ease; overflow: hidden; }
         .jarvis-cta-ai:hover { transform: scale(1.1); }
         .jarvis-cta-ai img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.1); }
-
         .jarvis-voice-btn { flex-shrink: 0; background: transparent; border: 1px solid #10b981; border-radius: 50%; width: 45px; height: 45px; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: all 0.3s ease; margin-top: 2px; }
         .jarvis-voice-btn svg { fill: #10b981; width: 22px; height: 22px; transition: 0.3s; }
         .jarvis-voice-btn.jarvis-playing { background: #10b981; animation: jarvis-pulse 1.5s infinite; }
         .jarvis-voice-btn.jarvis-playing svg { fill: #030712; }
-
         .jarvis-chat-box { display: none; position: fixed; bottom: 100px; right: 25px; width: 320px; background: rgba(3, 7, 18, 0.96); backdrop-filter: blur(16px); border: 1px solid #10b981; border-radius: 16px; z-index: 9998; flex-direction: column; box-shadow: 0 12px 35px rgba(0,0,0,0.6); overflow: hidden; }
         .jarvis-chat-header { background: #10b981; color: #030712; padding: 12px 15px; font-weight: 800; display: flex; justify-content: space-between; align-items: center; }
         .jarvis-chat-history { height: 280px; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; scroll-behavior: smooth; color: #cbd5e1; }
@@ -264,7 +258,7 @@
                     <div id="ig-wrapper" class="shadow-[0_0_50px_rgba(16,185,129,0.15)] animate-border-glow">
                         <div id="ig-placeholder" class="ig-placeholder" onclick="loadHeroVideo()">
                     <!-- GAMBAR THUMBNAIL DITERANGKAN & EYE-CATCHING -->
-                            <img src="pintu-masuk-kos-eksklusif-kesambi-cirebon.webp" alt="Video Lobi Arsa Tera" class="absolute inset-0 w-full h-full object-cover opacity-80" fetchpriority="high" loading="eager" decoding="sync">
+                            <img src="pintu-masuk-kos-eksklusif-kesambi-cirebon.webp" alt="Video Lobi Arsa Tera" class="absolute inset-0 w-full h-full object-cover opacity-80" loading="lazy">
                             <!-- Gradient bawah saja agar teks terbaca -->
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                             
@@ -531,7 +525,7 @@
                     <a href="tipe-kamar/mezzanine-bulanan.html" class="text-xs text-auraEmerald font-bold uppercase tracking-wider group-hover:text-white transition-colors">Info Kos Bulanan →</a>
                 </div>
                 <!-- Gambar Mezzanine -->
-                <a href="#galeri-proyek" class="glass-card p-0 relative overflow-hidden flex flex-col justify-end min-h-[300px] group md:col-span-2 lg:col-span-1 border-white/10 hover:border-auraEmerald/40">
+                <a href="#rute-akses" class="glass-card p-0 relative overflow-hidden flex flex-col justify-end min-h-[300px] group md:col-span-2 lg:col-span-1 border-white/10 hover:border-auraEmerald/40">
                     <img loading="lazy" src="desain-kamar-kos-mezzanine-cirebon.webp" alt="Kamar Mezzanine" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/60 to-transparent"></div>
                     <div class="relative z-10 p-8">
@@ -646,7 +640,7 @@
                         <div class="relative w-[280px] sm:w-[320px] aspect-[9/16] rounded-[2.5rem] p-2 bg-white/5 border border-white/10 shadow-2xl">
                             <!-- FACADE SCRIPT INTEGRATION -->
                             <div id="route-placeholder" class="relative w-full h-full rounded-[2rem] overflow-hidden cursor-pointer group" onclick="loadRouteVideo()">
-                                <img src="rute-akses-arsatera.webp" alt="Rute Akses Arsa Tera Cirebon" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
+                                <img src="rute-akses-arsatera.webp" alt="Rute Akses Arsa Tera Cirebon" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" loading="lazy">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
                                 
                                 <div class="absolute inset-0 flex flex-col items-center justify-center">
