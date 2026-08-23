@@ -615,89 +615,53 @@
             </div>
         </section>
 
-        <!-- ================= GALERI FACADE VIDEO (VERTIKAL 9:16 IG REELS) ================= -->
-        <section id="galeri-proyek" class="py-16 mt-10 border-t border-white/5 relative z-10">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-              <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Galeri & Room Tour</h2>
-              <p class="text-lg text-slate-400">Jelajahi setiap sudut kenyamanan Arsa Tera secara virtual.</p>
+        <!-- ================= RUTE AKSES VIDEO (PENGGANTI GALERI) ================= -->
+        <section id="rute-akses" class="py-20 mt-10 border-t border-white/5 relative z-10 bg-gradient-to-b from-transparent to-[#0a0f1c]/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    
+                    <!-- TEKS DESKRIPSI RUTE -->
+                    <div class="order-2 lg:order-1 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-auraEmerald/30 bg-auraEmerald/10 text-xs font-bold text-auraEmerald uppercase tracking-widest mb-6 shadow-lg">
+                            <span class="w-2 h-2 rounded-full bg-auraEmerald animate-pulse"></span> Akses Super Mudah
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
+                            Hanya 3 Menit dari <br><span class="text-auraEmerald italic">Pusat Kuliner Cipto</span>
+                        </h2>
+                        <p class="text-slate-300 text-base md:text-lg mb-8 leading-relaxed">
+                            Buktikan sendiri seberapa strategis lokasi <strong class="text-white font-semibold">Arsa Tera Guest House & Co-Living</strong>. Tonton video panduan rute perjalanan singkat dari hiruk pikuk Jalan Cipto Mangunkusumo langsung menuju ketenangan gerbang hunian eksklusif kami. Bebas macet dan sangat mudah ditemukan!
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="https://maps.app.goo.gl/seXHVvHvcqf9Myvp8" target="_blank" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-obsidian bg-auraEmerald hover:-translate-y-1 transition-transform shadow-[0_10px_20px_rgba(16,185,129,0.3)]">
+                                Buka Titik Google Maps <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- VIDEO FACADE (RUTE AKSES) -->
+                    <div class="order-1 lg:order-2 flex justify-center lg:justify-end relative">
+                        <div class="absolute inset-0 bg-auraEmerald/20 blur-[100px] rounded-full pointer-events-none scale-75"></div>
+                        
+                        <div class="relative w-[280px] sm:w-[320px] aspect-[9/16] rounded-[2.5rem] p-2 bg-white/5 border border-white/10 shadow-2xl">
+                            <!-- FACADE SCRIPT INTEGRATION -->
+                            <div id="route-placeholder" class="relative w-full h-full rounded-[2rem] overflow-hidden cursor-pointer group" onclick="loadRouteVideo()">
+                                <img src="rute-akses-arsatera.webp" alt="Rute Akses Arsa Tera Cirebon" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-auraEmerald/90 border-4 border-obsidian flex items-center justify-center text-obsidian mb-4 shadow-[0_0_30px_rgba(16,185,129,0.6)] group-hover:scale-110 transition-transform">
+                                        <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    </div>
+                                    <span class="text-white text-xs font-bold uppercase tracking-widest bg-obsidian/80 px-4 py-1.5 rounded-full border border-white/10 backdrop-blur-md">Putar Video Rute</span>
+                                </div>
+                            </div>
+                            <div id="route-video-container" class="w-full h-full rounded-[2rem] overflow-hidden hidden"></div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-
-            <!-- GRID FACADE MULTIPLE VIDEO 9:16 (Auto-Scroll di HP) -->
-            <div class="flex overflow-x-auto pb-8 snap-x snap-mandatory gap-4 sm:gap-6 md:grid md:grid-cols-3 lg:grid-cols-4 justify-start md:justify-items-center scrollbar-hide">
-
-              <!-- VIDEO 1: Reviewer Pintu Masuk (Anggita) -->
-              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/reel/DcOK8itKewf/embed/">
-                <img src="pintu-masuk-kos-eksklusif-kesambi-cirebon.webp" alt="Reviewer di Pintu Masuk Kos Eksklusif Cirebon" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110" loading="lazy">
-                <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all">
-                  <div class="bg-auraEmerald rounded-full p-4 shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover:scale-110 transition-transform">
-                    <svg class="w-8 h-8 text-obsidian ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M8 5v14l11-7z"/></svg>
-                  </div>
-                </div>
-              </div>
-
-              <!-- VIDEO 2: Room Tour Mezzanine -->
-              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/reel/DcDDSpqz4FY/embed/">
-                <img src="desain-kamar-kos-mezzanine-cirebon.webp" alt="Desain Kamar Kos Mezzanine Cirebon" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110" loading="lazy">
-                <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all">
-                  <div class="bg-auraEmerald rounded-full p-4 shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover:scale-110 transition-transform">
-                    <svg class="w-8 h-8 text-obsidian ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M8 5v14l11-7z"/></svg>
-                  </div>
-                </div>
-              </div>
-
-              <!-- VIDEO 3: Pria Bawa Koper (Staycation) -->
-              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/reel/DcBCNb4P5aP/embed/">
-                <img src="sewa-harian-guest-house-cirebon-arsa-tera.webp" alt="Pria Bawa Koper Sewa Harian Guest House Cirebon" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110" loading="lazy">
-                <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all">
-                  <div class="bg-auraEmerald rounded-full p-4 shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover:scale-110 transition-transform">
-                    <svg class="w-8 h-8 text-obsidian ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M8 5v14l11-7z"/></svg>
-                  </div>
-                </div>
-              </div>
-
-              <!-- VIDEO 4: Open Kitchen Bersama -->
-              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/reel/Db19WdLvTsN/embed/">
-                <img src="dapur-bersama-kos-eksklusif-cirebon.webp" alt="Dapur Bersama Kos Eksklusif Cirebon" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110" loading="lazy">
-                <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all">
-                  <div class="bg-auraEmerald rounded-full p-4 shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover:scale-110 transition-transform">
-                    <svg class="w-8 h-8 text-obsidian ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M8 5v14l11-7z"/></svg>
-                  </div>
-                </div>
-              </div>
-
-              <!-- VIDEO 5: Kamar Standar / Deluxe 1 -->
-              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/reel/DbsjpxZD36w/embed/">
-                <img src="kamar-standar-fasilitas-hotel-cirebon.webp" alt="Kamar Standar Fasilitas Hotel Cirebon" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110" loading="lazy">
-                <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all">
-                  <div class="bg-auraEmerald rounded-full p-4 shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover:scale-110 transition-transform">
-                    <svg class="w-8 h-8 text-obsidian ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M8 5v14l11-7z"/></svg>
-                  </div>
-                </div>
-              </div>
-
-              <!-- VIDEO 6: Kamar Standar / Deluxe 2 -->
-              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/reel/Dbsjmk-j4lR/embed/">
-                <img src="guest-house-pusat-kota-cirebon-arsa-tera.webp" alt="Fasilitas Kamar Standar Cirebon" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110" loading="lazy">
-                <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all">
-                  <div class="bg-auraEmerald rounded-full p-4 shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover:scale-110 transition-transform">
-                    <svg class="w-8 h-8 text-obsidian ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M8 5v14l11-7z"/></svg>
-                  </div>
-                </div>
-              </div>
-
-              <!-- VIDEO 7: Resepsionis / Reviewer -->
-              <div class="snap-center shrink-0 video-facade relative cursor-pointer rounded-[2rem] overflow-hidden shadow-2xl group border border-white/10 hover:border-auraEmerald transition-all duration-300 w-[260px] md:w-full aspect-[9/16]" data-video="https://www.instagram.com/reel/DbN9hMxzszm/embed/">
-                <img src="resepsionis-ramah-arsa-tera-cirebon.webp" alt="Resepsionis Ramah Arsa Tera Cirebon" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110" loading="lazy">
-                <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all">
-                  <div class="bg-auraEmerald rounded-full p-4 shadow-[0_0_20px_rgba(16,185,129,0.5)] group-hover:scale-110 transition-transform">
-                    <svg class="w-8 h-8 text-obsidian ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M8 5v14l11-7z"/></svg>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
         </section>
         
         <!-- ================= 3. FORM RESERVASI (WEB3FORMS + WA) ================= -->
@@ -1066,6 +1030,24 @@
                 container.innerHTML = `
                     <video controls autoplay playsinline class="w-full h-full object-cover rounded-[2rem]">
                         <source src="guest-house-pusat-kota-cirebon-arsa-tera.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung pemutar video HTML5.
+                    </video>
+                `;
+            }
+        }
+		// 7. SCRIPT LAZY LOAD VIDEO RUTE AKSES (GITHUB SELF-HOSTED)
+        function loadRouteVideo() {
+            const placeholder = document.getElementById('route-placeholder');
+            const container = document.getElementById('route-video-container');
+            if(placeholder && container) {
+                // Menghilangkan gambar thumbnail
+                placeholder.style.display = 'none';
+                // Menampilkan kontainer video
+                container.style.display = 'block';
+                // Injeksi video MP4 GitHub (Loading Wusss)
+                container.innerHTML = `
+                    <video controls autoplay playsinline class="w-full h-full object-cover">
+                        <source src="rute-akses-arsatera.mp4" type="video/mp4">
                         Browser Anda tidak mendukung pemutar video HTML5.
                     </video>
                 `;
