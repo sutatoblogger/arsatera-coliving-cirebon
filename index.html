@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"><link rel="preload" href="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)" as="script">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arsa Tera Guest House & Co-Living | Kos Eksklusif Cirebon</title>
     
@@ -14,7 +14,7 @@
     <!-- 1. TRIK BYPASS: PRELOAD & PRECONNECT (MENCURI START) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+
     <link rel="preload" as="image" href="guest-house-pusat-kota-cirebon-arsa-tera.webp" fetchpriority="high">
 
     <!-- 2. TRIK ASYNC FONT (MENGHILANGKAN BLANK PUTIH 1 DETIK) -->
@@ -102,25 +102,8 @@
     }
     </script>
     
-    <!-- 4. TAILWIND CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
-                    colors: { obsidian: '#030712', auraEmerald: '#10b981' },
-                    animation: { 'border-glow': 'borderGlow 3s ease-in-out infinite' },
-                    keyframes: {
-                        borderGlow: {
-                            '0%, 100%': { borderColor: 'rgba(16, 185, 129, 0.2)', boxShadow: '0 0 15px rgba(16, 185, 129, 0.1)' },
-                            '50%': { borderColor: 'rgba(16, 185, 129, 0.8)', boxShadow: '0 0 25px rgba(16, 185, 129, 0.3)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- 4. CSS STATIS SUPER RINGAN (ZERO-BLOAT) -->
+    <link rel="stylesheet" href="style.css">
 
     <!-- 5. CUSTOM CSS (TETAP AMAN) -->
     <style>
