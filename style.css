@@ -3,8 +3,7 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', Arial,
-    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: "Plus Jakarta Sans", sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
     --color-emerald-400: oklch(76.5% 0.177 163.223);
@@ -74,6 +73,9 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-obsidian: #030712;
+    --color-auraEmerald: #10b981;
+    --animate-border-glow: borderGlow 3s ease-in-out infinite;
   }
 }
 @layer base {
@@ -551,6 +553,9 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
+  .animate-border-glow {
+    animation: var(--animate-border-glow);
+  }
   .animate-pulse {
     animation: var(--animate-pulse);
   }
@@ -701,6 +706,30 @@
     border-left-style: var(--tw-border-style);
     border-left-width: 1px;
   }
+  .border-auraEmerald {
+    border-color: var(--color-auraEmerald);
+  }
+  .border-auraEmerald\/20 {
+    border-color: color-mix(in srgb, #10b981 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-auraEmerald) 20%, transparent);
+    }
+  }
+  .border-auraEmerald\/30 {
+    border-color: color-mix(in srgb, #10b981 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-auraEmerald) 30%, transparent);
+    }
+  }
+  .border-auraEmerald\/50 {
+    border-color: color-mix(in srgb, #10b981 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-auraEmerald) 50%, transparent);
+    }
+  }
+  .border-obsidian {
+    border-color: var(--color-obsidian);
+  }
   .border-white\/5 {
     border-color: color-mix(in srgb, #fff 5%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -730,6 +759,39 @@
   }
   .bg-\[\#030712\] {
     background-color: #030712;
+  }
+  .bg-auraEmerald {
+    background-color: var(--color-auraEmerald);
+  }
+  .bg-auraEmerald\/5 {
+    background-color: color-mix(in srgb, #10b981 5%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-auraEmerald) 5%, transparent);
+    }
+  }
+  .bg-auraEmerald\/10 {
+    background-color: color-mix(in srgb, #10b981 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-auraEmerald) 10%, transparent);
+    }
+  }
+  .bg-auraEmerald\/20 {
+    background-color: color-mix(in srgb, #10b981 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-auraEmerald) 20%, transparent);
+    }
+  }
+  .bg-auraEmerald\/90 {
+    background-color: color-mix(in srgb, #10b981 90%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-auraEmerald) 90%, transparent);
+    }
+  }
+  .bg-obsidian\/80 {
+    background-color: color-mix(in srgb, #030712 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-obsidian) 80%, transparent);
+    }
   }
   .bg-white\/5 {
     background-color: color-mix(in srgb, #fff 5%, transparent);
@@ -775,6 +837,17 @@
   }
   .from-\[\#111827\] {
     --tw-gradient-from: #111827;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .from-auraEmerald {
+    --tw-gradient-from: var(--color-auraEmerald);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .from-auraEmerald\/5 {
+    --tw-gradient-from: color-mix(in srgb, #10b981 5%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-gradient-from: color-mix(in oklab, var(--color-auraEmerald) 5%, transparent);
+    }
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .from-black\/80 {
@@ -1067,6 +1140,12 @@
   .text-\[\#475569\] {
     color: #475569;
   }
+  .text-auraEmerald {
+    color: var(--color-auraEmerald);
+  }
+  .text-obsidian {
+    color: var(--color-obsidian);
+  }
   .text-slate-200 {
     color: var(--color-slate-200);
   }
@@ -1251,6 +1330,31 @@
       --tw-scale-z: 110%;
       scale: var(--tw-scale-x) var(--tw-scale-y);
     }
+    .group-hover\:bg-auraEmerald:is(:where(.group):hover *) {
+      background-color: var(--color-auraEmerald);
+    }
+    .group-hover\:bg-auraEmerald\/10:is(:where(.group):hover *) {
+      background-color: color-mix(in srgb, #10b981 10%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .group-hover\:bg-auraEmerald\/10:is(:where(.group):hover *) {
+        background-color: color-mix(in oklab, var(--color-auraEmerald) 10%, transparent);
+      }
+    }
+    .group-hover\:bg-auraEmerald\/20:is(:where(.group):hover *) {
+      background-color: color-mix(in srgb, #10b981 20%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .group-hover\:bg-auraEmerald\/20:is(:where(.group):hover *) {
+        background-color: color-mix(in oklab, var(--color-auraEmerald) 20%, transparent);
+      }
+    }
+    .group-hover\:text-auraEmerald:is(:where(.group):hover *) {
+      color: var(--color-auraEmerald);
+    }
+    .group-hover\:text-obsidian:is(:where(.group):hover *) {
+      color: var(--color-obsidian);
+    }
     .group-hover\:text-white:is(:where(.group):hover *) {
       color: var(--color-white);
     }
@@ -1261,6 +1365,12 @@
     .group-hover\/btn\:opacity-100:is(:where(.group\/btn):hover *) {
       opacity: 100%;
     }
+  }
+  .selection\:bg-auraEmerald ::selection {
+    background-color: var(--color-auraEmerald);
+  }
+  .selection\:bg-auraEmerald::selection {
+    background-color: var(--color-auraEmerald);
   }
   .selection\:text-black ::selection {
     color: var(--color-black);
@@ -1288,6 +1398,10 @@
     content: var(--tw-content);
     width: 100%;
   }
+  .after\:bg-auraEmerald::after {
+    content: var(--tw-content);
+    background-color: var(--color-auraEmerald);
+  }
   .after\:shadow-\[0_0_10px_\#10b981\]::after {
     content: var(--tw-content);
     --tw-shadow: 0 0 10px var(--tw-shadow-color, #10b981);
@@ -1306,6 +1420,25 @@
       --tw-translate-y: calc(var(--spacing) * -2);
       translate: var(--tw-translate-x) var(--tw-translate-y);
     }
+    .hover\:border-auraEmerald\/30:hover {
+      border-color: color-mix(in srgb, #10b981 30%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:border-auraEmerald\/30:hover {
+        border-color: color-mix(in oklab, var(--color-auraEmerald) 30%, transparent);
+      }
+    }
+    .hover\:border-auraEmerald\/40:hover {
+      border-color: color-mix(in srgb, #10b981 40%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:border-auraEmerald\/40:hover {
+        border-color: color-mix(in oklab, var(--color-auraEmerald) 40%, transparent);
+      }
+    }
+    .hover\:bg-auraEmerald:hover {
+      background-color: var(--color-auraEmerald);
+    }
     .hover\:bg-emerald-400:hover {
       background-color: var(--color-emerald-400);
     }
@@ -1316,6 +1449,12 @@
       .hover\:bg-white\/10:hover {
         background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
       }
+    }
+    .hover\:text-auraEmerald:hover {
+      color: var(--color-auraEmerald);
+    }
+    .hover\:text-obsidian:hover {
+      color: var(--color-obsidian);
     }
     .hover\:text-white:hover {
       color: var(--color-white);
@@ -1336,9 +1475,15 @@
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
+  .focus\:border-auraEmerald:focus {
+    border-color: var(--color-auraEmerald);
+  }
   .focus\:ring-1:focus {
     --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .focus\:ring-auraEmerald:focus {
+    --tw-ring-color: var(--color-auraEmerald);
   }
   .focus\:outline-none:focus {
     --tw-outline-style: none;
@@ -1781,6 +1926,16 @@
 @keyframes pulse {
   50% {
     opacity: 0.5;
+  }
+}
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: rgba(16, 185, 129, 0.2);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.1);
+  }
+  50% {
+    border-color: rgba(16, 185, 129, 0.8);
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.3);
   }
 }
 @layer properties {
